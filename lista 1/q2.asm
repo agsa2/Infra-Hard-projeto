@@ -1,5 +1,5 @@
 # Grupo 05 - Lista 1
-# Quest„o 1
+# Quest√£o 1
 
 .data
 result_perfect_square: .word 0
