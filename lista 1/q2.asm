@@ -1,4 +1,4 @@
-#Quest„o 2
+#Quest√£o 2
 
 .data 
 A: .word 7
@@ -16,14 +16,14 @@ s_not: .asciiz "not"
 lw $t0, A # valor A
 lw $t1, B # valor B
 lw $t2, C # valor C
-la $t4, s # EndereÁo da string s
+la $t4, s # Endere√ßo da string s
 
-#Somando dois lados do tri‚ngulo
+#Somando dois lados do tri√¢ngulo
 add $s0, $t0, $t1 # $s0 recebe a soma de A + B
 add $s1, $t0, $t2 # $s1 recebe a soma de A + C 
 add $s2, $t1, $t2 # $s3 recebe a soma de B + C 
 
-#Verificando se dois lados s„o maiores que o terceiro
+#Verificando se dois lados s√£o maiores que o terceiro
 blt $s0, $t2, naoEhTriangulo # caso (A + B) < C nao e um triangulo
 blt $s1, $t1, naoEhTriangulo # caso (A + C) < B nao e um triangulo
 blt $s2, $t0, naoEhTriangulo # caso (B + C) < A nao e um triangulo
