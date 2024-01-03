@@ -1,0 +1,67 @@
+# Compile of Memoria.vhd was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of ula32.vhd was successful.
+# 4 compiles, 2 failed with no errors.
+# Compile of Banco_reg.vhd.vhd was successful.
+# Compile of Instr_Reg.vhd.vhd was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of ula32.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+# Compile of Mux_01-32b.v was successful.
+# can't read "Startup(-L)": no such element in array
+# Load canceled
+# can't read "Startup(-L)": no such element in array
+# Load canceled
+vsim work.mux_01_32b
+# vsim work.mux_01_32b 
+# Start time: 18:53:04 on Jan 02,2024
+# Loading work.mux_01_32b
+add wave -position insertpoint  \
+sim:/mux_01_32b/signal
+force -freeze sim:/mux_01_32b/signal 1 0, 0 {50 ps} -r 100
+add wave -position insertpoint  \
+sim:/mux_01_32b/signal
+wave create -driver freeze -pattern clock -initialvalue HiZ -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/mux_01_32b/signal
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+force -freeze Edit:/mux_01_32b/signal 0 0, 1 {50 ps} -r 100
+# ** UI-Msg (suppressible): (vsim-4008) Object 'Edit:/mux_01_32b/signal' not found.
+# 
+noforce sim:/mux_01_32b/signal
+force -freeze sim:/mux_01_32b/signal 0 0, 1 {50 ps} -r 100
+force -freeze sim:/mux_01_32b/signal 0 0, 1 {50 ps} -r 100
+wave create -driver freeze -pattern clock -initialvalue St0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000ps sim:/mux_01_32b/signal
+noforce sim:/mux_01_32b/data_1
+force -freeze sim:/mux_01_32b/data_1 00000000000000000000000000000111 0
+force -freeze sim:/mux_01_32b/data_1 00000000000000000000000000000111 0
+force -freeze sim:/mux_01_32b/data_2 00000000000000000000000000001001 0
+wave create -driver freeze -pattern constant -value 00000000000000000000000000000111 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_01_32b/data_1
+wave create -driver freeze -pattern constant -value 00000000000000000000000000001001 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_01_32b/data_2
+noforce Edit:/mux_01_32b/data_1
+# ** UI-Msg (suppressible): (vsim-3561) No objects found matching 'Edit'.
+# ** UI-Msg (suppressible): (vsim-4008) Object 'Edit:/mux_01_32b/data_1' not found.
+# 
+force -freeze Edit:/mux_01_32b/data_1 00000000000000000000000000000111 0
+# ** UI-Msg (suppressible): (vsim-4008) Object 'Edit:/mux_01_32b/data_1' not found.
+# 
+add wave -position insertpoint  \
+sim:/mux_01_32b/data_1
+add wave -position insertpoint  \
+sim:/mux_01_32b/data_2
+add wave -position insertpoint  \
+sim:/mux_01_32b/data_out
+wave create -driver freeze -pattern constant -value 00000000000000000000000000000111 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_01_32b/data_1
+wave create -driver freeze -pattern constant -value 00000000000000000000000000001001 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_01_32b/data_2
+add wave -position end  sim:/mux_01_32b/data_out
+run
+run
+run
+run
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/lider/CIn/InfraHardware/2023/Infra-Hard-projeto/projeto/Modelsim/mux_01_32b-wave.do
+wave editwrite -file C:/Users/lider/CIn/InfraHardware/2023/Infra-Hard-projeto/projeto/Modelsim/mux_01_32b-wave.do -append
+add wave -position end  sim:/mux_01_32b/data_1
+add wave -position end  sim:/mux_01_32b/data_2
+add wave -position end  sim:/mux_01_32b/data_out
