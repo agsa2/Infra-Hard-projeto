@@ -1,11 +1,11 @@
 --------------------------------------------------------------------------------
--- Title		: Unidade de L√≥gica e Aritm√©tica
+-- Title		: Unidade de LÛgica e AritmÈtica
 -- Project		: CPU multi-ciclo
 --------------------------------------------------------------------------------
 -- File			: ula32.vhd
--- Author		: Emannuel Gomes Mac√™do (egm@cin.ufpe.br)
+-- Author		: Emannuel Gomes MacÍdo (egm@cin.ufpe.br)
 --				  Fernando Raposo Camara da Silva (frcs@cin.ufpe.br)
---				  Pedro Machado Manh√£es de Castro (pmmc@cin.ufpe.br)
+--				  Pedro Machado Manh„es de Castro (pmmc@cin.ufpe.br)
 --				  Rodrigo Alves Costa (rac2@cin.ufpe.br)
 -- Organization : Universidade Federal de Pernambuco
 -- Created		: 29/07/2002
@@ -16,7 +16,7 @@
 -- Targets		: 
 -- Dependency	: 
 --------------------------------------------------------------------------------
--- Description	: Entidade que processa as opera√ß√µes l√≥gicas e aritm√©ticas da
+-- Description	: Entidade que processa as operaÁıes lÛgicas e aritmÈticas da
 -- cpu.
 --------------------------------------------------------------------------------
 -- Copyright (c) notice
@@ -40,8 +40,8 @@
 -- Revision Number	: 1.1
 -- Version			: 1.2
 -- Date				: 18/08/2008
--- Modifier			: Jo√£o Paulo Fernandes Barbosa (jpfb@cin.ufpe.br)
--- Description		: Entradas, sa√≠das e sinais internos passam a ser std_logic.
+-- Modifier			: Jo„o Paulo Fernandes Barbosa (jpfb@cin.ufpe.br)
+-- Description		: Entradas, saÌdas e sinais internos passam a ser std_logic.
 --------------------------------------------------------------------------------
 
 
@@ -55,9 +55,9 @@ entity Ula32 is
 	port ( 
 		A 			: in  std_logic_vector (31 downto 0);	-- Operando A da ULA
 		B 			: in  std_logic_vector (31 downto 0);	-- Operando B da ULA
-		Seletor 	: in  std_logic_vector (2 downto 0);	-- Seletor da opera√ß√£o da ULA
-		S 			: out std_logic_vector (31 downto 0);	-- Resultado da opera√ß√£o (SOMA, SUB, AND, NOT, INCREMENTO, XOR)  
-		Overflow 	: out std_logic;						-- Sinaliza overflow aritm√©tico
+		Seletor 	: in  std_logic_vector (2 downto 0);	-- Seletor da operaÁ„o da ULA
+		S 			: out std_logic_vector (31 downto 0);	-- Resultado da operaÁ„o (SOMA, SUB, AND, NOT, INCREMENTO, XOR)  
+		Overflow 	: out std_logic;						-- Sinaliza overflow aritmÈtico
 		Negativo	: out std_logic;						-- Sinaliza valor negativo
 		z 			: out std_logic;						-- Sinaliza quando S for zero
 		Igual		: out std_logic;						-- Sinaliza se A=B
@@ -69,13 +69,13 @@ end Ula32;
 -- Simulation
 architecture behavioral of Ula32 is
 	
-	signal s_temp		: std_logic_vector (31 downto 0);	-- Sinal que recebe valor tempor√°rio da opera√ß√£o realizada
- 	signal soma_temp 	: std_logic_vector (31 downto 0);   -- Sinal que recebe o valor temporario da soma, subtra√ß√£o ou incremento
-	signal carry_temp	: std_logic_vector (31 downto 0);   -- Vetor para aux√≠lio no c√°lculo das opera√ß√µes e do overflow aritm√©tico 
-	signal novo_B 		: std_logic_vector (31 downto 0);   -- Vetor que fornece o operando B, 1 ou not(B) para opera√ß√µes de soma, incremento ou subtra√ß√£o respectivamente
+	signal s_temp		: std_logic_vector (31 downto 0);	-- Sinal que recebe valor tempor·rio da operaÁ„o realizada
+ 	signal soma_temp 	: std_logic_vector (31 downto 0);   -- Sinal que recebe o valor temporario da soma, subtraÁ„o ou incremento
+	signal carry_temp	: std_logic_vector (31 downto 0);   -- Vetor para auxÌlio no c·lculo das operaÁıes e do overflow aritmÈtico 
+	signal novo_B 		: std_logic_vector (31 downto 0);   -- Vetor que fornece o operando B, 1 ou not(B) para operaÁıes de soma, incremento ou subtraÁ„o respectivamente
 	signal i_temp		: std_logic_vector (31 downto 0);   -- Vetor para calculo de incremento
-	signal igual_temp	: std_logic;						-- Bit que armazena instancia tempor√°ria de igualdade
-	signal overflow_temp: std_logic;						-- Bit que armazena valor tempor√°rio do overflow
+	signal igual_temp	: std_logic;						-- Bit que armazena instancia tempor·ria de igualdade
+	signal overflow_temp: std_logic;						-- Bit que armazena valor tempor·rio do overflow
 
 	begin
 
@@ -179,7 +179,7 @@ architecture behavioral of Ula32 is
 		   Overflow <= overflow_temp;
 
 --------------------------------------------------------------------------------
---		Regiao que calcula a compara√ß√£o										  --	
+--		Regiao que calcula a comparaÁ„o										  --	
 --------------------------------------------------------------------------------
 
 -- No codigo da comparacao (110) sera executada a subtracao na parte relativa
