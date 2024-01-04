@@ -3,7 +3,7 @@ module mux_ALUSrcB (
     input  wire [31:0] B,
     input  wire [31:0] Immediate,
     input  wire [31:0] ImmShifted,
-    output wire [31:0] ALUSrcB_Out,
+    output wire [31:0] ALUSrcB_Out
 );
 
 //   input 0 (00): B
@@ -17,7 +17,7 @@ module mux_ALUSrcB (
     assign aux1 = (ALUSrcB[0]) ? 32'b00000000000000000000000000000100 : B;
     assign aux2 = (ALUSrcB[0]) ? ImmShifted : Immediate;
 
-    assign ALUSrcB_out = (ALUSrcB[1]) ? aux2 : aux1;
+    assign ALUSrcB_Out = (ALUSrcB[1]) ? aux2 : aux1;
 
 endmodule
     
