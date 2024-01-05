@@ -1,9 +1,9 @@
-model mux_ShiftAmt (
-    input wire [2:0] ShiftAmt,
+module mux_ShiftAmt (
+    input wire [1:0] ShiftAmt,
     input wire [31:0] Shamt,
     input wire [31:0] MDR_Out,
     input wire [31:0] B_Out,
-    output wire [31:0] ShiftAMt_Out,
+    output wire [31:0] ShiftAMt_Out
 );
 
 //   input 0 (000): Shamt
@@ -14,6 +14,6 @@ model mux_ShiftAmt (
     
     assign aux1 = (ShiftAmt[0]) ? MDR_Out : Shamt;
 
-    assign ShiftAMt_Out = (ShiftAmt[0]) ? B_Out : aux1;
+    assign ShiftAMt_Out = (ShiftAmt[1]) ? B_Out : aux1;
 
 endmodule

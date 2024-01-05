@@ -3,7 +3,7 @@ module mux_RegDest (
     input  wire [31:0] rt,
     input  wire [31:0] rs,
     input  wire [31:0] rd,
-    output wire [31:0] RegDest_Out,
+    output wire [31:0] RegDest_Out
 );
 
 //   input 0 (000): rt

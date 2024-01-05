@@ -9,7 +9,7 @@ module mux_MemToReg (
     input  wire [31:0] ShiftReg_Out,
     input  wire [31:0] B_Out,
     input  wire [31:0] A_Out,
-    output wire [31:0] MemToReg_Out,
+    output wire [31:0] MemToReg_Out
 );
 
 //   input 0 (0000): ALUOut

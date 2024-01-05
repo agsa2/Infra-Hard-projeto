@@ -5,7 +5,7 @@ module mux_PCSrc (
     input  wire [31:0] Shift_28,
     input  wire [31:0] EPC_Out,
     input  wire [31:0] Sign_8_32,
-    output wire [31:0] PCSource_Out,
+    output wire [31:0] PCSource_Out
 );
 
 //   input 0 (000): ALU Result
@@ -14,9 +14,9 @@ module mux_PCSrc (
 //   input 3 (011): EPC out
 //   input 4 (100): Sign extend 8_32
 
-    wirw [31:0] aux1;
-    wirw [31:0] aux2;
-    wirw [31:0] aux3;
+    wire [31:0] aux1;
+    wire [31:0] aux2;
+    wire [31:0] aux3;
 
     assign aux1 = (PCSource[0]) ? ALUOut : ALU_Result;
     assign aux2 = (PCSource[0]) ? EPC_Out : Shift_28;

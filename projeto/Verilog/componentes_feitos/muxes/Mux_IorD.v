@@ -4,7 +4,7 @@ module mux_IorD (
     input  wire [31:0] ALUOut,
     input  wire [31:0] ALU_Result,
     input  wire [31:0] Excpt_Out,
-    output wire [31:0] IorD_Out,
+    output wire [31:0] IorD_Out
 );
 
 //   input 0 (00): PC
