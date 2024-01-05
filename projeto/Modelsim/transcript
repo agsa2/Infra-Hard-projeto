@@ -1,385 +1,172 @@
-# Compile of Mux_ShiftAmt.v failed with 2 errors.
-# Compile of Mux_ShiftAmt.v failed with 2 errors.
-# Compile of Mux_ShiftAmt.v was successful.
-# Compile of Banco_reg.vhd.vhd was successful.
-# Compile of Instr_Reg.vhd.vhd was successful.
-# Compile of Memoria.vhd was successful.
-# Compile of RegDesloc.vhd was successful.
-# Compile of Registrador.vhd was successful.
-# Compile of ula32.vhd was successful.
-# Compile of Mux_01-32b.v was successful.
-# Compile of Mux_ALUSrcB.v failed with 1 errors.
-# Compile of Mux_IorD.v failed with 1 errors.
-# Compile of Mux_MemToReg.v failed with 1 errors.
-# Compile of Mux_PCSrc.v failed with 1 errors.
-# Compile of Mux_RegDest.v failed with 1 errors.
-# Compile of Mux_ShiftAmt.v was successful.
-# 13 compiles, 5 failed with 5 errors.
-# Compile of Mux_PCSrc.v failed with 1 errors.
-# Compile of Mux_PCSrc.v was successful.
-# Compile of Mux_RegDest.v failed with 1 errors.
-# Compile of Mux_RegDest.v was successful.
-# Compile of Mux_ALUSrcB.v failed with 1 errors.
-# Compile of Mux_ALUSrcB.v was successful.
-# Compile of Mux_IorD.v was successful.
-# Compile of Mux_MemToReg.v was successful.
-vsim work.mux_01_32b
-# vsim work.mux_01_32b 
-# Start time: 16:19:00 on Jan 04,2024
-# Loading work.mux_01_32b
-add wave -position end  sim:/mux_01_32b/data_out
-wave create -driver freeze -pattern constant -value 32'd13 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_01_32b/data_1
-# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
-wave create -driver freeze -pattern constant -value 32'd5 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_01_32b/data_2
-wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000ps sim:/mux_01_32b/signal
-wave edit invert -start 952ps -end 957ps Edit:/mux_01_32b/signal
-wave edit invert -start 964ps -end 968ps Edit:/mux_01_32b/signal
+vmap -del work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap -del work 
+# Removing reference to logical library work
+# Modifying C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Modelsim/InfraHard.mpf
+vmap work work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Modelsim/InfraHard.mpf
+# Compile of extend_28_32.v was successful.
+# Compile of shift_left_2.v failed with 2 errors.
+# Compile of shift_left_16.v failed with 2 errors.
+# Compile of shift_left_26_28.v was successful.
+# Compile of sign_extend_1_32.v was successful.
+# Compile of sign_extend_8_32.v was successful.
+# Compile of sign_extend_16_32.v was successful.
+# 7 compiles, 2 failed with 4 errors.
+# Compile of shift_left_2.v was successful.
+# Compile of shift_left_16.v was successful.
+vsim work.shift_left_16
+# vsim work.shift_left_16 
+# Start time: 14:23:27 on Jan 05,2024
+# Loading work.shift_left_16
+add wave sim:/shift_left_16/*
+force -freeze sim:/shift_left_16/sign_in 16'b0000000000000001 0
 run
-add wave -position insertpoint  \
-sim:/mux_01_32b/data_1
-wave edit invert -start 100ps -end 202ps Edit:/mux_01_32b/data_2
-add wave -position end  sim:/mux_01_32b/data_out
-wave create -driver freeze -pattern constant -value 32'd4 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_01_32b/data_1
-wave create -driver freeze -pattern constant -value 32'd2 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_01_32b/data_2
-wave create -driver freeze -pattern constant -value St0 -starttime 0ps -endtime 1000ps sim:/mux_01_32b/signal
-wave edit invert -start 98ps -end 199ps Edit:/mux_01_32b/signal
-wave edit invert -start 299ps -end 399ps Edit:/mux_01_32b/signal
-wave edit invert -start 501ps -end 601ps Edit:/mux_01_32b/signal
+force -freeze sim:/shift_left_16/sign_in 00000000000000001000000000000000 0
 run
-add wave -position 1  sim:/mux_01_32b/data_1
-add wave -position 2  sim:/mux_01_32b/data_2
-add wave -position 0  sim:/mux_01_32b/signal
+vsim work.shift_left_2
+# End time: 14:32:40 on Jan 05,2024, Elapsed time: 0:09:13
+# Errors: 0, Warnings: 5
+# vsim work.shift_left_2 
+# Start time: 14:32:40 on Jan 05,2024
+# Loading work.shift_left_2
+add wave sim:/shift_left_2/*
+force -freeze sim:/shift_left_2/sign_in 00000000000000000000000000000010 0
 run
+force -freeze sim:/shift_left_2/sign_in 10100000000000000000000000000010 0
+force -freeze sim:/shift_left_2/sign_out 00000000000000000000000000001000 0
 run
+force -freeze sim:/shift_left_2/sign_in 10110010000000000000000000000010 0
 run
+noforce sim:/shift_left_2/sign_out
 run
-run
-run
-run
-run -continue
-run -continue
-run -continue
-run -continue
-vsim work.mux_ShiftAmt
-# End time: 16:42:16 on Jan 04,2024, Elapsed time: 0:23:16
-# Errors: 0, Warnings: 13
-# vsim work.mux_ShiftAmt 
-# Start time: 16:42:16 on Jan 04,2024
-# Loading work.mux_ShiftAmt
-wave create -driver freeze -pattern constant -value 0 -range 2 0 -starttime 0ps -endtime 1000ps sim:/mux_ShiftAmt/ShiftAmt
-# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
-# mux_01_32b
-wave create -driver freeze -pattern constant -value 32'd1 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_ShiftAmt/Shamt
-# mux_01_32b
-wave create -driver freeze -pattern constant -value 32'd2 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_ShiftAmt/MDR_Out
-# mux_01_32b
-wave create -driver freeze -pattern constant -value 32'd3 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_ShiftAmt/B_Out
-# mux_01_32b
-add wave -position end  sim:/mux_ShiftAmt/ShiftAMt_Out
-add wave -position 4  sim:/mux_ShiftAmt/ShiftAmt
-add wave -position 5  sim:/mux_ShiftAmt/Shamt
-add wave -position 6  sim:/mux_ShiftAmt/MDR_Out
-add wave -position 7  sim:/mux_ShiftAmt/B_Out
-add wave -position end  sim:/mux_ShiftAmt/ShiftAmt
-add wave -position end  sim:/mux_ShiftAmt/Shamt
-add wave -position end  sim:/mux_ShiftAmt/MDR_Out
-add wave -position end  sim:/mux_ShiftAmt/B_Out
-add wave -position end  sim:/mux_ShiftAmt/ShiftAMt_Out
-add wave -position end  sim:/mux_ShiftAmt/ShiftAMt_Out
-wave create -driver freeze -pattern constant -value 32'd2 -range 2 0 -starttime 0ps -endtime 1000ps sim:/mux_ShiftAmt/ShiftAmt
-# mux_01_32b
-add wave -position 1  sim:/mux_ShiftAmt/ShiftAmt
-wave create -driver freeze -pattern constant -value 32'd3 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_ShiftAmt/MDR_Out
-# mux_01_32b
-wave create -driver freeze -pattern constant -value 0 -range 2 0 -starttime 0ps -endtime 1000ps sim:/mux_ShiftAmt/ShiftAmt
-# /mux_ShiftAmt/ShiftAmt already exists in the wave, cannot add twice
-# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
-# See Command Reference manual for pattern specific <args>
-wave create -driver freeze -pattern constant -value 0 -range 2 0 -starttime 0ps -endtime 1000ps sim:/mux_ShiftAmt/ShiftAmt
-# /mux_ShiftAmt/ShiftAmt already exists in the wave, cannot add twice
-# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
-# See Command Reference manual for pattern specific <args>
-wave create -driver freeze -pattern constant -value 32'd1 -range 2 0 -starttime 0ps -endtime 1000ps sim:/mux_ShiftAmt/ShiftAmt
-# /mux_ShiftAmt/ShiftAmt already exists in the wave, cannot add twice
-# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
-# See Command Reference manual for pattern specific <args>
-force -freeze sim:/mux_ShiftAmt/ShiftAmt 0 0
-wave create -driver freeze -pattern constant -value 32'd1 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_ShiftAmt/Shamt
-# mux_01_32b
-force -freeze Edit:/mux_ShiftAmt/Shamt 32'd1 0
-# ** UI-Msg (suppressible): (vsim-4008) Object 'Edit:/mux_ShiftAmt/Shamt' not found.
-# 
-add wave -position 2  sim:/mux_ShiftAmt/Shamt
-force -freeze sim:/mux_ShiftAmt/Shamt 32'd1 0
-add wave -position 3  sim:/mux_ShiftAmt/MDR_Out
-force -freeze sim:/mux_ShiftAmt/MDR_Out 32'd2 0
-add wave -position 4  sim:/mux_ShiftAmt/B_Out
-force -freeze sim:/mux_ShiftAmt/B_Out 32'd3 0
-vsim work.mux_ShiftAmt
-# End time: 16:59:54 on Jan 04,2024, Elapsed time: 0:17:38
+vsim work.shift_left_26_28
+# End time: 14:39:20 on Jan 05,2024, Elapsed time: 0:06:40
 # Errors: 0, Warnings: 1
-# vsim work.mux_ShiftAmt 
-# Start time: 16:59:54 on Jan 04,2024
-# Loading work.mux_ShiftAmt
-add wave -position end  sim:/mux_ShiftAmt/ShiftAMt_Out
-wave create -driver freeze -pattern constant -value 32'd1 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_ShiftAmt/Shamt
-# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
-# mux_ShiftAmt
-add wave -position 1  sim:/mux_ShiftAmt/Shamt
-wave create -driver freeze -pattern constant -value 32'd2 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_ShiftAmt/MDR_Out
-# mux_ShiftAmt
-add wave -position 2  sim:/mux_ShiftAmt/MDR_Out
-wave create -driver freeze -pattern constant -value 32'd3 -range 31 0 -starttime 0ps -endtime 1000ps sim:/mux_ShiftAmt/B_Out
-# mux_ShiftAmt
-add wave -position 3  sim:/mux_ShiftAmt/B_Out
-wave create -driver freeze -pattern constant -value 0 -range 2 0 -starttime 0ps -endtime 1000ps sim:/mux_ShiftAmt/ShiftAmt
-# mux_ShiftAmt
-wave edit invert -start 0ps -end 100ps Edit:/mux_ShiftAmt/ShiftAmt
-wave edit invert -start 100ps -end 200ps Edit:/mux_ShiftAmt/ShiftAmt
-wave edit invert -start 0ps -end 100ps Edit:/mux_ShiftAmt/ShiftAmt
-wave edit invert -start 101ps -end 200ps Edit:/mux_ShiftAmt/ShiftAmt
-add wave -position end  sim:/mux_ShiftAmt/ShiftAmt
-add wave -position end  sim:/mux_ShiftAmt/Shamt
-add wave -position end  sim:/mux_ShiftAmt/MDR_Out
-add wave -position end  sim:/mux_ShiftAmt/B_Out
+# vsim work.shift_left_26_28 
+# Start time: 14:39:20 on Jan 05,2024
+# Loading work.shift_left_26_28
+add wave sim:/shift_left_26_28/*
+force -freeze sim:/shift_left_26_28/rs 0001 0
+force -freeze sim:/shift_left_26_28/rt 00001 0
+force -freeze sim:/shift_left_26_28/immediate 0000000000000001 0
 run
-run
-add wave -position insertpoint sim:/mux_ShiftAmt/*
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[0]} 0 0
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[1]} 1 0
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[2]} 0 0
-run
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[2]} 1 0
-run
-add wave -position insertpoint sim:/mux_ShiftAmt/*
-add wave sim:/mux_ShiftAmt/*
-run -continue
-run -continue
-run -continue
-run -continue
-run -continue
-run -all
-env ..
-# sim:/mux_ShiftAmt
-step -out
-# Nothing left to do.
-step -out
-# Nothing left to do.
-vsim work.mux_01_32b
-# ** Error: Aes eao
-#        Unable to replace existing ini file (C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Modelsim/InfraHard.mpf).  File can not be renamed.
-# End time: 17:26:31 on Jan 04,2024, Elapsed time: 0:26:37
-# Errors: 1, Warnings: 1
-# vsim work.mux_01_32b 
-# Start time: 17:26:31 on Jan 04,2024
-# Loading work.mux_01_32b
-add wave sim:/mux_01_32b/*
-force -freeze sim:/mux_01_32b/signal 0 0
-force -freeze sim:/mux_01_32b/data_1 32'd1 0
-force -freeze sim:/mux_01_32b/data_2 32'd2 0
-run
-force -freeze sim:/mux_01_32b/signal 1 0
-run
-run
-force -freeze sim:/mux_01_32b/signal St0 0
-run
-vsim work.mux_ShiftAmt
-# End time: 17:29:20 on Jan 04,2024, Elapsed time: 0:02:49
+vsim work.extend_28_32
+# End time: 14:43:41 on Jan 05,2024, Elapsed time: 0:04:21
 # Errors: 0, Warnings: 1
-# vsim work.mux_ShiftAmt 
-# Start time: 17:29:20 on Jan 04,2024
-# Loading work.mux_ShiftAmt
-add wave sim:/mux_ShiftAmt/*
-force -freeze sim:/mux_ShiftAmt/Shamt 32'd1 0
-force -freeze sim:/mux_ShiftAmt/MDR_Out 32'd2 0
-force -freeze sim:/mux_ShiftAmt/B_Out 32'd3 0
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[0]} 0 0
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[1]} 0 0
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[2]} 0 0
+# vsim work.extend_28_32 
+# Start time: 14:43:41 on Jan 05,2024
+# Loading work.extend_28_32
+add wave sim:/extend_28_32/*
+force -freeze sim:/extend_28_32/pc 10101010000000000000000000000000 0
+force -freeze sim:/extend_28_32/extend_26_28 1010000000000000000000000101 0
 run
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[0]} St1 0
+vsim work.extend_1_32
+# End time: 14:52:33 on Jan 05,2024, Elapsed time: 0:08:52
+# Errors: 0, Warnings: 1
+# vsim work.extend_1_32 
+# Start time: 14:52:33 on Jan 05,2024
+# Loading work.extend_1_32
+add wave sim:/extend_1_32/*
+force -freeze sim:/extend_1_32/extend_in 1 0
 run
+force -freeze sim:/extend_1_32/extend_in St1 0
+force -freeze sim:/extend_1_32/extend_in 1'b1 0
 run
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[1]} St1 0
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[0]} St0 0
+vsim work.extend_8_32
+# End time: 14:59:43 on Jan 05,2024, Elapsed time: 0:07:10
+# Errors: 0, Warnings: 1
+# vsim work.extend_8_32 
+# Start time: 14:59:43 on Jan 05,2024
+# Loading work.extend_8_32
+add wave sim:/extend_8_32/*
+force -freeze sim:/extend_8_32/immediate 000000001 0
 run
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[0]} St1 0
+force -freeze sim:/extend_8_32/immediate 10000001 0
 run
-# Compile of Mux_ShiftAmt.v was successful.
-vsim work.mux_ShiftAmt
-# End time: 17:35:50 on Jan 04,2024, Elapsed time: 0:06:30
+vsim work.extend_1_32
+# End time: 15:08:40 on Jan 05,2024, Elapsed time: 0:08:57
+# Errors: 0, Warnings: 1
+# vsim work.extend_1_32 
+# Start time: 15:08:40 on Jan 05,2024
+# Loading work.extend_1_32
+add wave sim:/extend_1_32/*
+force -freeze sim:/extend_1_32/extend_in 1 0
+# Error opening C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v
+# Path name 'C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v' doesn't exist.
+# Error opening C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v
+# Path name 'C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v' doesn't exist.
+# Error opening C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v
+# Path name 'C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v' doesn't exist.
+vsim work.extend_1_32
+# End time: 15:09:34 on Jan 05,2024, Elapsed time: 0:00:54
 # Errors: 0, Warnings: 2
-# vsim work.mux_ShiftAmt 
-# Start time: 17:35:50 on Jan 04,2024
-# Loading work.mux_ShiftAmt
-add wave sim:/mux_ShiftAmt/*
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[0]} 0 0
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[1]} 1 0
-force -freeze sim:/mux_ShiftAmt/Shamt 32'd1 0
-force -freeze sim:/mux_ShiftAmt/MDR_Out 32'd2 0
-force -freeze sim:/mux_ShiftAmt/B_Out 32'd3 0
-run
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[1]} St0 0
-run
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[0]} St1 0
-run
-force -freeze {sim:/mux_ShiftAmt/ShiftAmt[1]} St1 0
-run
-vsim work.mux_IorD
-# End time: 17:42:54 on Jan 04,2024, Elapsed time: 0:07:04
-# Errors: 0, Warnings: 1
-# vsim work.mux_IorD 
-# Start time: 17:42:54 on Jan 04,2024
-# Loading work.mux_IorD
-add wave sim:/mux_IorD/*
-force -freeze {sim:/mux_IorD/IorD[0]} 0 0
-force -freeze {sim:/mux_IorD/IorD[1]} 0 0
-force -freeze sim:/mux_IorD/PC 32'd1 0
-force -freeze sim:/mux_IorD/ALUOut 32'd2 0
-force -freeze sim:/mux_IorD/ALU_Result 32'd3 0
-force -freeze sim:/mux_IorD/Excpt_Out 32'd4 0
-run
-force -freeze {sim:/mux_IorD/IorD[0]} St1 0
-run
-force -freeze {sim:/mux_IorD/IorD[1]} St1 0
-run
-force -freeze {sim:/mux_IorD/IorD[0]} St0 0
-run
-run
-run
-force -freeze {sim:/mux_IorD/IorD[0]} St1 0
-run
-vsim work.mux_RegDest
-# End time: 22:19:50 on Jan 04,2024, Elapsed time: 4:36:56
-# Errors: 0, Warnings: 1
-# vsim work.mux_RegDest 
-# Start time: 22:19:50 on Jan 04,2024
-# Loading work.mux_RegDest
-add wave sim:/mux_RegDest/*
-force -freeze {sim:/mux_RegDest/RegDest[0]} 0 0
-force -freeze {sim:/mux_RegDest/RegDest[1]} 0 0
-force -freeze {sim:/mux_RegDest/RegDest[2]} 0 0
-force -freeze sim:/mux_RegDest/rt 32'd1 0
-force -freeze sim:/mux_RegDest/rs 32'd2 0
-force -freeze sim:/mux_RegDest/rd 32'd3 0
-run
-force -freeze {sim:/mux_RegDest/RegDest[0]} St1 0
-run
-force -freeze {sim:/mux_RegDest/RegDest[1]} St1 0
-force -freeze {sim:/mux_RegDest/RegDest[0]} St0 0
-run
-force -freeze {sim:/mux_RegDest/RegDest[0]} St1 0
-run
-force -freeze {sim:/mux_RegDest/RegDest[2]} St1 0
-force -freeze {sim:/mux_RegDest/RegDest[1]} St0 0
-force -freeze {sim:/mux_RegDest/RegDest[0]} St0 0
-run
-vsim work.mux_ALUSrcB
-# End time: 22:27:08 on Jan 04,2024, Elapsed time: 0:07:18
-# Errors: 0, Warnings: 1
-# vsim work.mux_ALUSrcB 
-# Start time: 22:27:08 on Jan 04,2024
-# Loading work.mux_ALUSrcB
-add wave sim:/mux_ALUSrcB/*
-noforce {sim:/mux_ALUSrcB/ALUSrcB[0]}
-force -freeze {sim:/mux_ALUSrcB/ALUSrcB[0]} 0 0
-force -freeze {sim:/mux_ALUSrcB/ALUSrcB[1]} 0 0
-force -freeze sim:/mux_ALUSrcB/B 32'd1 0
-force -freeze sim:/mux_ALUSrcB/Immediate 32'd2 0
-force -freeze sim:/mux_ALUSrcB/ImmShifted 32'd3 0
-force -freeze sim:/mux_ALUSrcB/ALUSrcB_Out 32'd4 0
-run
-# Compile of Mux_ALUSrcB.v was successful.
-vsim work.mux_ALUSrcB
-# End time: 22:30:14 on Jan 04,2024, Elapsed time: 0:03:06
+# vsim work.extend_1_32 
+# Start time: 15:09:34 on Jan 05,2024
+# Loading work.extend_1_32
+# Error opening C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v
+# Path name 'C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v' doesn't exist.
+# Compile of sign_extend_1_32.v was successful.
+vsim work.extend_1_32
+# End time: 15:10:24 on Jan 05,2024, Elapsed time: 0:00:50
 # Errors: 0, Warnings: 2
-# vsim work.mux_ALUSrcB 
-# Start time: 22:30:14 on Jan 04,2024
-# Loading work.mux_ALUSrcB
-add wave sim:/mux_ALUSrcB/*
-force -freeze {sim:/mux_ALUSrcB/ALUSrcB[0]} 0 0
-force -freeze {sim:/mux_ALUSrcB/ALUSrcB[1]} 0 0
-force -freeze sim:/mux_ALUSrcB/B 32'd1 0
-force -freeze sim:/mux_ALUSrcB/Immediate 32'd2 0
-force -freeze sim:/mux_ALUSrcB/ImmShifted 32'd3 0
+# vsim work.extend_1_32 
+# Start time: 15:10:25 on Jan 05,2024
+# Loading work.extend_1_32
+add wave sim:/extend_1_32/*
+force -freeze sim:/extend_1_32/extend_in 1 0
 run
+force -freeze sim:/extend_1_32/extend_in St0 0
 run
-force -freeze {sim:/mux_ALUSrcB/ALUSrcB[0]} St1 0
-run
-force -freeze {sim:/mux_ALUSrcB/ALUSrcB[1]} St1 0
-force -freeze {sim:/mux_ALUSrcB/ALUSrcB[0]} St0 0
-run
-force -freeze {sim:/mux_ALUSrcB/ALUSrcB[0]} St1 0
-run
-vsim work.mux_PCSrc
-# End time: 22:34:47 on Jan 04,2024, Elapsed time: 0:04:33
+vsim work.extend_16_32
+# End time: 15:11:37 on Jan 05,2024, Elapsed time: 0:01:12
 # Errors: 0, Warnings: 1
-# vsim work.mux_PCSrc 
-# Start time: 22:34:47 on Jan 04,2024
-# Loading work.mux_PCSrc
-add wave sim:/mux_PCSrc/*
-force -freeze {sim:/mux_PCSrc/PCSource[0]} 0 0
-force -freeze {sim:/mux_PCSrc/PCSource[1]} 0 0
-force -freeze {sim:/mux_PCSrc/PCSource[2]} 0 0
-force -freeze {sim:/mux_PCSrc/PCSource[3]} 0 0
-force -freeze sim:/mux_PCSrc/ALU_Result 32'd1 0
-force -freeze sim:/mux_PCSrc/ALUOut 32'd2 0
-force -freeze sim:/mux_PCSrc/Shift_28 32'd3 0
-force -freeze sim:/mux_PCSrc/EPC_Out 32'd4 0
-force -freeze sim:/mux_PCSrc/Sign_8_32 32'd5 0
+# vsim work.extend_16_32 
+# Start time: 15:11:37 on Jan 05,2024
+# Loading work.extend_16_32
+add wave sim:/extend_16_32/*
+force -freeze sim:/extend_16_32/immediate 1000000010000001 0
+force -freeze sim:/extend_16_32/extend_out xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
 run
-force -freeze {sim:/mux_PCSrc/PCSource[0]} St1 0
+# WARNING: No extended dataflow license exists
+force -freeze sim:/extend_16_32/extend_out {} 0
 run
-force -freeze {sim:/mux_PCSrc/PCSource[1]} St1 0
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+force -freeze sim:/extend_16_32/immediate 0000000000000000 0
 run
-force -freeze {sim:/mux_PCSrc/PCSource[0]} St0 0
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+noforce sim:/extend_16_32/extend_out
 run
-force -freeze {sim:/mux_PCSrc/PCSource[2]} St1 0
 run
-force -freeze {sim:/mux_PCSrc/PCSource[1]} St0 0
+force -freeze sim:/extend_16_32/extend_out 00000000000000000000000000000000 0
+force -freeze sim:/extend_16_32/immediate 1000000000000000 0
 run
-vsim work.mux_MemToReg
-# End time: 22:49:02 on Jan 04,2024, Elapsed time: 0:14:15
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+force -freeze sim:/extend_16_32/immediate 1000000000000001 0
+run
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+run
+vsim work.extend_1_32
+# End time: 17:06:43 on Jan 05,2024, Elapsed time: 1:55:06
 # Errors: 0, Warnings: 1
-# vsim work.mux_MemToReg 
-# Start time: 22:49:02 on Jan 04,2024
-# Loading work.mux_MemToReg
-add wave sim:/mux_MemToReg/*
-force -freeze sim:/mux_MemToReg/MemToReg 0 0
-force -freeze sim:/mux_MemToReg/MemToReg 1 0
-force -freeze sim:/mux_MemToReg/MemToReg 2 0
-# Invalid binary digit: 2.
-# ** UI-Msg: (vsim-4011) Invalid force value: 2 0.
-# 
-force -freeze sim:/mux_MemToReg/MemToReg 1010 0
-force -freeze sim:/mux_MemToReg/MemToReg 0000 0
-force -freeze sim:/mux_MemToReg/ALUOut 32'd1 0
-force -freeze sim:/mux_MemToReg/LSControl_Out 32'd2 0
-force -freeze sim:/mux_MemToReg/Imm_SL16 32'd3 0
-force -freeze sim:/mux_MemToReg/HI_Out 32'd4 0
-force -freeze sim:/mux_MemToReg/LO_Out 32'd5 0
-force -freeze sim:/mux_MemToReg/Imm_SignExt 32'd6 0
-force -freeze sim:/mux_MemToReg/ShiftReg_Out 32'd7 0
-force -freeze sim:/mux_MemToReg/B_Out 32'd8 0
-force -freeze sim:/mux_MemToReg/A_Out 32'd9 0
+# vsim work.extend_1_32 
+# Start time: 17:06:43 on Jan 05,2024
+# Loading work.extend_1_32
+add wave sim:/extend_1_32/*
+force -freeze sim:/extend_1_32/extend_in 1 0
 run
-force -freeze sim:/mux_MemToReg/MemToReg 0001 0
+vsim work.extend_16_32
+# End time: 17:07:31 on Jan 05,2024, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 1
+# vsim work.extend_16_32 
+# Start time: 17:07:31 on Jan 05,2024
+# Loading work.extend_16_32
+add wave sim:/extend_16_32/*
+force -freeze sim:/extend_16_32/immediate 1000000000000001 0
 run
-force -freeze sim:/mux_MemToReg/MemToReg 0010 0
+force -freeze sim:/extend_16_32/immediate 0000000000000001 0
 run
-force -freeze sim:/mux_MemToReg/MemToReg 0011 0
-run
-force -freeze sim:/mux_MemToReg/MemToReg 0100 0
-run
-force -freeze sim:/mux_MemToReg/MemToReg 0101 0
-run
-force -freeze sim:/mux_MemToReg/MemToReg 0110 0
-run
-force -freeze sim:/mux_MemToReg/MemToReg 0111 0
-run
-force -freeze sim:/mux_MemToReg/MemToReg 1000 0
-run
-force -freeze sim:/mux_MemToReg/MemToReg 1001 0
-run
-force -freeze sim:/mux_MemToReg/MemToReg 1010 0
-run
+# End time: 17:09:24 on Jan 05,2024, Elapsed time: 0:01:53
+# Errors: 0, Warnings: 1
