@@ -29,7 +29,7 @@ initial begin
     LO_Out = 32'b000;
 end
 
-always @(negedge Clock) begin
+always @(posedge Clock) begin
     if (Reset) begin
         Multiplicando = 64'b00000;
         Multiplicador = 32'b00000;
@@ -48,10 +48,12 @@ always @(negedge Clock) begin
             Multiplicador = Multiplicador >> 1;
 
             Contador = Contador + 1;
-            if (Contador == 6'b011111) begin    // 32 ciclos
+            if (Contador == 6'b100000) begin    // 32 ciclos
                 HI_Out = Produto[63:32];
                 LO_Out = Produto[31:0];
+                Produto = 64'b00000;
                 Controle = 1'b0;
+                Contador = 6'b000000;
             end
         end
         if (Mult_Control != Controle) begin
@@ -60,6 +62,7 @@ always @(negedge Clock) begin
                 Multiplicando[31:0] = A;
                 Multiplicando[63:32] = 32'b00000000000;
                 Multiplicador = B;
+                Contador = 6'b000000;
             end
         end
     end
