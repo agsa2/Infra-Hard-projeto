@@ -1,172 +1,96 @@
-vmap -del work
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap -del work 
-# Removing reference to logical library work
-# Modifying C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Modelsim/InfraHard.mpf
-vmap work work
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work work 
-# Modifying C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Modelsim/InfraHard.mpf
+# Error opening C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\Memoria.vhd
+# Path name 'C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\Memoria.vhd' doesn't exist.
+# Error opening C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\Memoria.vhd
+# Path name 'C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\Memoria.vhd' doesn't exist.
+# Error opening C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\Memoria.vhd
+# Path name 'C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\Memoria.vhd' doesn't exist.
 # Compile of extend_28_32.v was successful.
-# Compile of shift_left_2.v failed with 2 errors.
-# Compile of shift_left_16.v failed with 2 errors.
-# Compile of shift_left_26_28.v was successful.
-# Compile of sign_extend_1_32.v was successful.
-# Compile of sign_extend_8_32.v was successful.
-# Compile of sign_extend_16_32.v was successful.
-# 7 compiles, 2 failed with 4 errors.
 # Compile of shift_left_2.v was successful.
 # Compile of shift_left_16.v was successful.
-vsim work.shift_left_16
-# vsim work.shift_left_16 
-# Start time: 14:23:27 on Jan 05,2024
-# Loading work.shift_left_16
-add wave sim:/shift_left_16/*
-force -freeze sim:/shift_left_16/sign_in 16'b0000000000000001 0
+# Compile of shift_left_26_28.v was successful.
+# Compile of sign_extend_8_32.v was successful.
+# Compile of sign_extend_16_32.v was successful.
+# Compile of load_size_control.v was successful.
+# Compile of mdr.v was successful.
+# Compile of store_control.v was successful.
+# 9 compiles, 14 failed with no errors.
+# Compile of store_control.v was successful.
+# Compile of mdr.v was successful.
+# Compile of load_size_control.v was successful.
+# Compile of load_size_control.v was successful.
+# ** Error: Aes eao
+#        Unable to replace existing ini file (C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Modelsim/InfraHard.mpf).  File can not be renamed.
+vsim work.mdr
+# End time: 21:10:16 on Jan 09,2024, Elapsed time: 0:03:42
+# Errors: 1, Warnings: 7
+# vsim work.mdr 
+# Start time: 21:10:16 on Jan 09,2024
+# Loading work.mdr
+add wave sim:/mdr/*
+force -freeze sim:/mdr/memData 00000100000000100000000000010000 0
 run
-force -freeze sim:/shift_left_16/sign_in 00000000000000001000000000000000 0
-run
-vsim work.shift_left_2
-# End time: 14:32:40 on Jan 05,2024, Elapsed time: 0:09:13
-# Errors: 0, Warnings: 5
-# vsim work.shift_left_2 
-# Start time: 14:32:40 on Jan 05,2024
-# Loading work.shift_left_2
-add wave sim:/shift_left_2/*
-force -freeze sim:/shift_left_2/sign_in 00000000000000000000000000000010 0
-run
-force -freeze sim:/shift_left_2/sign_in 10100000000000000000000000000010 0
-force -freeze sim:/shift_left_2/sign_out 00000000000000000000000000001000 0
-run
-force -freeze sim:/shift_left_2/sign_in 10110010000000000000000000000010 0
-run
-noforce sim:/shift_left_2/sign_out
-run
-vsim work.shift_left_26_28
-# End time: 14:39:20 on Jan 05,2024, Elapsed time: 0:06:40
-# Errors: 0, Warnings: 1
-# vsim work.shift_left_26_28 
-# Start time: 14:39:20 on Jan 05,2024
-# Loading work.shift_left_26_28
-add wave sim:/shift_left_26_28/*
-force -freeze sim:/shift_left_26_28/rs 0001 0
-force -freeze sim:/shift_left_26_28/rt 00001 0
-force -freeze sim:/shift_left_26_28/immediate 0000000000000001 0
-run
-vsim work.extend_28_32
-# End time: 14:43:41 on Jan 05,2024, Elapsed time: 0:04:21
-# Errors: 0, Warnings: 1
-# vsim work.extend_28_32 
-# Start time: 14:43:41 on Jan 05,2024
-# Loading work.extend_28_32
-add wave sim:/extend_28_32/*
-force -freeze sim:/extend_28_32/pc 10101010000000000000000000000000 0
-force -freeze sim:/extend_28_32/extend_26_28 1010000000000000000000000101 0
-run
-vsim work.extend_1_32
-# End time: 14:52:33 on Jan 05,2024, Elapsed time: 0:08:52
-# Errors: 0, Warnings: 1
-# vsim work.extend_1_32 
-# Start time: 14:52:33 on Jan 05,2024
-# Loading work.extend_1_32
-add wave sim:/extend_1_32/*
-force -freeze sim:/extend_1_32/extend_in 1 0
-run
-force -freeze sim:/extend_1_32/extend_in St1 0
-force -freeze sim:/extend_1_32/extend_in 1'b1 0
-run
-vsim work.extend_8_32
-# End time: 14:59:43 on Jan 05,2024, Elapsed time: 0:07:10
-# Errors: 0, Warnings: 1
-# vsim work.extend_8_32 
-# Start time: 14:59:43 on Jan 05,2024
-# Loading work.extend_8_32
-add wave sim:/extend_8_32/*
-force -freeze sim:/extend_8_32/immediate 000000001 0
-run
-force -freeze sim:/extend_8_32/immediate 10000001 0
-run
-vsim work.extend_1_32
-# End time: 15:08:40 on Jan 05,2024, Elapsed time: 0:08:57
-# Errors: 0, Warnings: 1
-# vsim work.extend_1_32 
-# Start time: 15:08:40 on Jan 05,2024
-# Loading work.extend_1_32
-add wave sim:/extend_1_32/*
-force -freeze sim:/extend_1_32/extend_in 1 0
-# Error opening C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v
-# Path name 'C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v' doesn't exist.
-# Error opening C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v
-# Path name 'C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v' doesn't exist.
-# Error opening C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v
-# Path name 'C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v' doesn't exist.
-vsim work.extend_1_32
-# End time: 15:09:34 on Jan 05,2024, Elapsed time: 0:00:54
+# Compile of mdr.v was successful.
+vsim work.mdr
+# End time: 21:23:01 on Jan 09,2024, Elapsed time: 0:12:45
 # Errors: 0, Warnings: 2
-# vsim work.extend_1_32 
-# Start time: 15:09:34 on Jan 05,2024
-# Loading work.extend_1_32
-# Error opening C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v
-# Path name 'C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_feitos\muxes\Mux_01-32b.v' doesn't exist.
-# Compile of sign_extend_1_32.v was successful.
-vsim work.extend_1_32
-# End time: 15:10:24 on Jan 05,2024, Elapsed time: 0:00:50
-# Errors: 0, Warnings: 2
-# vsim work.extend_1_32 
-# Start time: 15:10:25 on Jan 05,2024
-# Loading work.extend_1_32
-add wave sim:/extend_1_32/*
-force -freeze sim:/extend_1_32/extend_in 1 0
+# vsim work.mdr 
+# Start time: 21:23:01 on Jan 09,2024
+# Loading work.mdr
+add wave sim:/mdr/*
+force -freeze sim:/mdr/memData 00000000000000000000000000010001 0
+force -freeze sim:/mdr/mdr_out xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
 run
-force -freeze sim:/extend_1_32/extend_in St0 0
+force -freeze sim:/mdr/mdr_out 0 0
 run
-vsim work.extend_16_32
-# End time: 15:11:37 on Jan 05,2024, Elapsed time: 0:01:12
+noforce sim:/mdr/mdr_out
+run
+vsim work.store_control
+# End time: 21:25:28 on Jan 09,2024, Elapsed time: 0:02:27
 # Errors: 0, Warnings: 1
-# vsim work.extend_16_32 
-# Start time: 15:11:37 on Jan 05,2024
-# Loading work.extend_16_32
-add wave sim:/extend_16_32/*
-force -freeze sim:/extend_16_32/immediate 1000000010000001 0
-force -freeze sim:/extend_16_32/extend_out xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
+# vsim work.store_control 
+# Start time: 21:25:28 on Jan 09,2024
+# Loading work.store_control
+add wave sim:/store_control/*
+force -freeze sim:/store_control/SS_control 00 0
+force -freeze sim:/store_control/B 00000000010000100100010000100000 0
+force -freeze sim:/store_control/mdr_input 00100000100000000000000000000000 0
+force -freeze sim:/store_control/SS_out xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
+force -freeze sim:/store_control/SWH xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
 run
-# WARNING: No extended dataflow license exists
-force -freeze sim:/extend_16_32/extend_out {} 0
+noforce sim:/store_control/SS_out
+noforce sim:/store_control/SWH
 run
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-force -freeze sim:/extend_16_32/immediate 0000000000000000 0
+force -freeze sim:/store_control/SS_control 01 0
 run
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-noforce sim:/extend_16_32/extend_out
+force -freeze sim:/store_control/SS_control 10 0
 run
+vsim work.load_size_control
+# ** Error: Aes eao
+#        Unable to replace existing ini file (C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Modelsim/InfraHard.mpf).  File can not be renamed.
+# End time: 21:30:46 on Jan 09,2024, Elapsed time: 0:05:18
+# Errors: 1, Warnings: 1
+# vsim work.load_size_control 
+# Start time: 21:30:46 on Jan 09,2024
+# Loading work.load_size_control
+add wave sim:/load_size_control/*
+force -freeze sim:/load_size_control/LS_control 00 0
+force -freeze sim:/load_size_control/mdr_input 00000010000010000010000010000000 0
+force -freeze sim:/load_size_control/LS_out xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
+force -freeze sim:/load_size_control/LWH xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
+noforce sim:/load_size_control/LS_control
+noforce sim:/load_size_control/mdr_input
+noforce sim:/load_size_control/LS_out
+noforce sim:/load_size_control/LWH
+noforce sim:/load_size_control/LWH
 run
-force -freeze sim:/extend_16_32/extend_out 00000000000000000000000000000000 0
-force -freeze sim:/extend_16_32/immediate 1000000000000000 0
+force -freeze sim:/load_size_control/LS_control 00 0
+force -freeze sim:/load_size_control/mdr_input 00000100001000100010001000010001 0
+noforce sim:/load_size_control/LS_out
+noforce sim:/load_size_control/LWH
 run
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-force -freeze sim:/extend_16_32/immediate 1000000000000001 0
+force -freeze sim:/load_size_control/LS_control 01 0
 run
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+force -freeze sim:/load_size_control/LS_control 10 0
 run
-vsim work.extend_1_32
-# End time: 17:06:43 on Jan 05,2024, Elapsed time: 1:55:06
-# Errors: 0, Warnings: 1
-# vsim work.extend_1_32 
-# Start time: 17:06:43 on Jan 05,2024
-# Loading work.extend_1_32
-add wave sim:/extend_1_32/*
-force -freeze sim:/extend_1_32/extend_in 1 0
-run
-vsim work.extend_16_32
-# End time: 17:07:31 on Jan 05,2024, Elapsed time: 0:00:48
-# Errors: 0, Warnings: 1
-# vsim work.extend_16_32 
-# Start time: 17:07:31 on Jan 05,2024
-# Loading work.extend_16_32
-add wave sim:/extend_16_32/*
-force -freeze sim:/extend_16_32/immediate 1000000000000001 0
-run
-force -freeze sim:/extend_16_32/immediate 0000000000000001 0
-run
-# End time: 17:09:24 on Jan 05,2024, Elapsed time: 0:01:53
+# End time: 21:40:26 on Jan 09,2024, Elapsed time: 0:09:40
 # Errors: 0, Warnings: 1
