@@ -28,8 +28,8 @@ module Control_Unit (
     output reg [1:0] ALU_SrcB,
     output reg HI_Src,
     output reg LO_Src,
-    output reg [1:0] Shift_Src,
-    output reg [2:0] Shift_Amt,
+    output reg Shift_Src,
+    output reg [1:0] Shift_Amt,
 
     // Registers controls
     output reg PC_Write,
@@ -45,7 +45,7 @@ module Control_Unit (
     output reg EPC_Write,
 
     // ALU control
-    output reg [3:0] ALU_Op,
+    output reg [2:0] ALU_Op,
 
     // Exception
     output reg AllowException,
@@ -162,8 +162,8 @@ always @(posedge Clock) begin
             ALU_SrcB = 2'b0;
             HI_Src = 1'b0;
             LO_Src = 1'b0;
-            Shift_Src = 2'b0;
-            Shift_Amt = 3'b0;
+            Shift_Src = 1'b0;
+            Shift_Amt = 2'b0;
 
             PC_Write = 1'b0;
             PC_Write_Cond = 1'b0;
@@ -177,7 +177,7 @@ always @(posedge Clock) begin
             ALUOut_Write = 1'b0;
             EPC_Write = 1'b0;
 
-            ALU_Op = 4'b0;
+            ALU_Op = 3'b0;
 
             AllowException = 1'b0;
             OPCode_Error = 1'b0;
@@ -196,8 +196,8 @@ always @(posedge Clock) begin
             ALU_SrcB = 2'b0;
             HI_Src = 1'b0;
             LO_Src = 1'b0;
-            Shift_Src = 2'b0;
-            Shift_Amt = 3'b0;
+            Shift_Src = 1'b0;
+            Shift_Amt = 2'b0;
 
             PC_Write = 1'b0;
             PC_Write_Cond = 1'b0;
@@ -211,7 +211,7 @@ always @(posedge Clock) begin
             ALUOut_Write = 1'b0;
             EPC_Write = 1'b0;
 
-            ALU_Op = 4'b0;
+            ALU_Op = 3'b0;
 
             AllowException = 1'b0;
             OPCode_Error = 1'b0;
@@ -220,6 +220,193 @@ always @(posedge Clock) begin
     else begin
         case (State)
             State_Common: begin
+                case (Counter)
+                    6'b000000: begin
+                        State = State_Common;
+                        
+                        Reset_Signal = 1'b0;
+                        Counter = 6'b0;
+
+                        PC_Src = 3'b0;
+                        IorD = 2'b0;
+                        Reg_Dst = 3'b0;
+                        MemToReg = 4'b0;
+                        ALU_SrcA = 1'b0;
+                        ALU_SrcB = 2'b0;
+                        HI_Src = 1'b0;
+                        LO_Src = 1'b0;
+                        Shift_Src = 1'b0;
+                        Shift_Amt = 2'b0;
+
+                        PC_Write = 1'b0;
+                        PC_Write_Cond = 1'b0;
+                        Mem_WR = 1'b0;
+                        IR_Write = 1'b0;
+                        Reg_Write = 1'b0;
+                        A_Write = 1'b0;
+                        B_Write = 1'b0;
+                        HI_Write = 1'b0;
+                        LO_Write = 1'b0;
+                        ALUOut_Write = 1'b0;
+                        EPC_Write = 1'b0;
+
+                        ALU_Op = 3'b0;
+
+                        AllowException = 1'b0;
+                        OPCode_Error = 1'b0;
+
+                        Counter = Counter + 1;
+                    end
+                    6'b000001: begin
+                        State = State_Common;
+                        
+                        Reset_Signal = 1'b0;
+                        Counter = 6'b0;
+
+                        PC_Src = 3'b0;
+                        IorD = 2'b0;
+                        Reg_Dst = 3'b0;
+                        MemToReg = 4'b0;
+                        ALU_SrcA = 1'b0;
+                        ALU_SrcB = 2'b01;
+                        HI_Src = 1'b0;
+                        LO_Src = 1'b0;
+                        Shift_Src = 1'b0;
+                        Shift_Amt = 2'b0;
+
+                        PC_Write = 1'b1;
+                        PC_Write_Cond = 1'b0;
+                        Mem_WR = 1'b0;
+                        IR_Write = 1'b0;
+                        Reg_Write = 1'b0;
+                        A_Write = 1'b0;
+                        B_Write = 1'b0;
+                        HI_Write = 1'b0;
+                        LO_Write = 1'b0;
+                        ALUOut_Write = 1'b0;
+                        EPC_Write = 1'b0;
+
+                        ALU_Op = 3'b001;
+
+                        AllowException = 1'b0;
+                        OPCode_Error = 1'b0;
+
+                        Counter = Counter + 1;
+                    end
+                    6'b000010: begin
+                        State = State_Common;
+                        
+                        Reset_Signal = 1'b0;
+                        Counter = 6'b0;
+
+                        PC_Src = 3'b0;
+                        IorD = 2'b0;
+                        Reg_Dst = 3'b0;
+                        MemToReg = 4'b0;
+                        ALU_SrcA = 1'b0;
+                        ALU_SrcB = 2'b0;
+                        HI_Src = 1'b0;
+                        LO_Src = 1'b0;
+                        Shift_Src = 2'b0;
+                        Shift_Amt = 3'b0;
+
+                        PC_Write = 1'b0;
+                        PC_Write_Cond = 1'b0;
+                        Mem_WR = 1'b0;
+                        IR_Write = 1'b1;
+                        Reg_Write = 1'b0;
+                        A_Write = 1'b0;
+                        B_Write = 1'b0;
+                        HI_Write = 1'b0;
+                        LO_Write = 1'b0;
+                        ALUOut_Write = 1'b0;
+                        EPC_Write = 1'b0;
+
+                        ALU_Op = 4'b0;
+
+                        AllowException = 1'b0;
+                        OPCode_Error = 1'b0;
+
+                        Counter = Counter + 1;
+                    end
+                    6'b000011: begin
+                        State = State_Common;
+                        
+                        Reset_Signal = 1'b0;
+                        Counter = 6'b0;
+
+                        PC_Src = 3'b0;
+                        IorD = 2'b0;
+                        Reg_Dst = 3'b0;
+                        MemToReg = 4'b0;
+                        ALU_SrcA = 1'b0;
+                        ALU_SrcB = 2'b0;
+                        HI_Src = 1'b0;
+                        LO_Src = 1'b0;
+                        Shift_Src = 2'b0;
+                        Shift_Amt = 3'b0;
+
+                        PC_Write = 1'b0;
+                        PC_Write_Cond = 1'b0;
+                        Mem_WR = 1'b0;
+                        IR_Write = 1'b0;
+                        Reg_Write = 1'b0;
+                        A_Write = 1'b1;
+                        B_Write = 1'b1;
+                        HI_Write = 1'b0;
+                        LO_Write = 1'b0;
+                        ALUOut_Write = 1'b0;
+                        EPC_Write = 1'b0;
+
+                        ALU_Op = 4'b0;
+
+                        AllowException = 1'b0;
+                        OPCode_Error = 1'b0;
+
+                        Counter = Counter + 1;
+                    end
+                    6'b000100: begin
+                        Reset_Signal = 1'b0;
+                        Counter = 6'b0;
+
+                        PC_Src = 3'b0;
+                        IorD = 2'b0;
+                        Reg_Dst = 3'b0;
+                        MemToReg = 4'b0;
+                        ALU_SrcA = 1'b0;
+                        ALU_SrcB = 2'b0;
+                        HI_Src = 1'b0;
+                        LO_Src = 1'b0;
+                        Shift_Src = 2'b0;
+                        Shift_Amt = 3'b0;
+
+                        PC_Write = 1'b0;
+                        PC_Write_Cond = 1'b0;
+                        Mem_WR = 1'b0;
+                        IR_Write = 1'b1;
+                        Reg_Write = 1'b0;
+                        A_Write = 1'b0;
+                        B_Write = 1'b0;
+                        HI_Write = 1'b0;
+                        LO_Write = 1'b0;
+                        ALUOut_Write = 1'b0;
+                        EPC_Write = 1'b0;
+
+                        case (OP_Code)
+                            OPCode_R: begin
+                                
+                            end 
+                            default: begin
+                                ALU_Op = 4'b0;
+                                AllowException = 1'b0;
+                                OPCode_Error = 1'b1;
+                            end
+                        endcase
+
+
+                        Counter = 0;
+                    end
+                endcase
             end
             State_Reset: begin
                 State = State_Common;
