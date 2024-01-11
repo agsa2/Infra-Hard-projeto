@@ -22,6 +22,10 @@ module Control_Unit (
     // Shift Control
     output reg [2:0] Shift_Control;
 
+    // Data Size Control
+    output reg [1:0] LS_Control;
+    output reg [1:0] SS_Control;
+
     // Muxes controls
     output reg [2:0] PC_Src,
     output reg [1:0] IorD,

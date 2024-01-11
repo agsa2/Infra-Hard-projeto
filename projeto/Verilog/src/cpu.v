@@ -13,6 +13,9 @@ module cpu (
     wire Reset_Signal;
 
     wire [2:0] Shift_Control;
+    
+    wire [1:0] LS_Control;
+    wire [1:0] SS_Control;
 
     wire [2:0] PC_Src;
     wire [1:0] IorD;
@@ -75,6 +78,8 @@ module cpu (
 
     wire [31:0] Mem_Address;        // Mem_Address: Saída do mux IorD e entrada da memória
     wire [31:0] Mem_Data;           // Mem_Data: Saída da memória e entrada do IR e do MDR
+
+    wire [31:0] MDR_Out;            // MDR_Out: Saída do MDR e entrada dos modulos LSControl e SSControl
 
     wire [31:0] SSControl_Out;      // SSControl_Out: Saída do SSControl e entrada do banco da memória
     wire [31:0] LSControl_Out;      // LSControl_Out: Saída do LSControl e entrada do mux MemToReg e SignExt_8_32
@@ -263,6 +268,28 @@ module cpu (
         EPC_Out
     );
 
+    // MDR Modules
+    // MDR
+    mdr MDR(
+        Mem_Data,
+        MDR_Out
+    );
+
+    // LSControl
+    load_size_control LSControl(
+        LS_Control,
+        MDR_Out,
+        LSControl_Out
+    );
+
+    // SSControl
+    store_size_control SSControl(
+        SS_Control,
+        B_Out,
+        MDR_Out,
+        SSControl_Out
+    );
+
     // Muxes
     // PCSrc
     mux_PCSrc Mux_PCSrc(
@@ -380,7 +407,29 @@ module cpu (
         ShiftL_26_28_Out
     );
 
-    assign Jump_Address = {PC_Out[31:28], ShiftL_26_28_Out};
-
     // Sign Extenders
+    // SignExt_1_32
+    extend_1_32 SignExt_1_32(
+        Lt,
+        ALU_Result
+    );
+
+    // SignExt_8_32
+    extend_8_32 SignExt_8_32(
+        LSControl_Out[7:0],
+        SignExt_8_32
+    );
+
+    // SignExt_16_32
+    extend_16_32 SignExt_16_32(
+        Instr_15_0,
+        Imm_SignExt
+    );
+
+    // SignExt_28_32
+    extend_28_32 SignExt_28_32(
+        PC_Out,
+        ShiftL_26_28_Out,
+        Jump_Address
+    );
 endmodule
