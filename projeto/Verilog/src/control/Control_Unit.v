@@ -19,6 +19,9 @@ module Control_Unit (
     // Reset
     output reg Reset_Signal,
 
+    // Shift Control
+    output reg [2:0] Shift_Control;
+
     // Muxes controls
     output reg [2:0] PC_Src,
     output reg [1:0] IorD,
@@ -154,6 +157,8 @@ always @(posedge Clock) begin
             Reset_Signal = 1'b1;
             Counter = 6'b0;
 
+            Shift_Control = 3'b0;
+
             PC_Src = 3'b0;
             IorD = 2'b0;
             Reg_Dst = 3'b0;
@@ -187,6 +192,8 @@ always @(posedge Clock) begin
             
             Reset_Signal = 1'b0;
             Counter = 6'b0;
+
+            Shift_Control = 3'b0;
 
             PC_Src = 3'b0;
             IorD = 2'b0;
@@ -227,6 +234,8 @@ always @(posedge Clock) begin
                         Reset_Signal = 1'b0;
                         Counter = 6'b0;
 
+                        Shift_Control = 3'b0;
+
                         PC_Src = 3'b0;
                         IorD = 2'b0;
                         Reg_Dst = 3'b0;
@@ -262,6 +271,8 @@ always @(posedge Clock) begin
                         
                         Reset_Signal = 1'b0;
                         Counter = 6'b0;
+
+                        Shift_Control = 3'b0;
 
                         PC_Src = 3'b0;
                         IorD = 2'b0;
@@ -299,6 +310,8 @@ always @(posedge Clock) begin
                         Reset_Signal = 1'b0;
                         Counter = 6'b0;
 
+                        Shift_Control = 3'b0;
+
                         PC_Src = 3'b0;
                         IorD = 2'b0;
                         Reg_Dst = 3'b0;
@@ -335,6 +348,8 @@ always @(posedge Clock) begin
                         Reset_Signal = 1'b0;
                         Counter = 6'b0;
 
+                        Shift_Control = 3'b0;
+
                         PC_Src = 3'b0;
                         IorD = 2'b0;
                         Reg_Dst = 3'b0;
@@ -368,6 +383,8 @@ always @(posedge Clock) begin
                     6'b000100: begin
                         Reset_Signal = 1'b0;
                         Counter = 6'b0;
+
+                        Shift_Control = 3'b0;
 
                         PC_Src = 3'b0;
                         IorD = 2'b0;
@@ -413,6 +430,8 @@ always @(posedge Clock) begin
                 
                 Reset_Signal = 1'b1;
                 Counter = 6'b0;
+
+                Shift_Control = 3'b0;
 
                 PC_Src = 3'b0;
                 IorD = 2'b0;

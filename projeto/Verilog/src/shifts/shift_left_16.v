@@ -1,8 +1,10 @@
 module shift_left_16(
-    input wire [31:0] sign_in,
+    input wire [15:0] sign_in,
     output wire [31:0] sign_out 
 );
 
-    assign sign_out = sign_in << 16;
+    wire [31:0] aux = {16'b0, sign_in};
+
+    assign sign_out = aux << 16;
 
 endmodule
