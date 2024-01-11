@@ -42,6 +42,7 @@ module Control_Unit (
     output reg PC_Write,
     output reg PC_Write_Cond,
     output reg Mem_WR,
+    output reg MDR_Write,
     output reg IR_Write,
     output reg Reg_Write,
     output reg A_Write,

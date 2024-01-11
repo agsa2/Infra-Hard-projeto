@@ -31,6 +31,7 @@ module cpu (
     wire PC_Write;
     wire PC_Write_Cond;
     wire Mem_WR;
+    wire MDR_Write;
     wire IR_Write;
     wire Reg_Write;
     wire A_Write;
@@ -270,7 +271,10 @@ module cpu (
 
     // MDR Modules
     // MDR
-    mdr MDR(
+    Registrador MDR(
+        Clock,
+        Reset_Signal,
+        MDR_Write,
         Mem_Data,
         MDR_Out
     );
