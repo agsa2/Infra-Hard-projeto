@@ -1,5 +1,5 @@
 module mux_PCSrc (
-    input  wire [3:0]  PCSource,
+    input  wire [2:0]  PCSource,
     input  wire [31:0] ALU_Result,
     input  wire [31:0] ALUOut,
     input  wire [31:0] Shift_28,
