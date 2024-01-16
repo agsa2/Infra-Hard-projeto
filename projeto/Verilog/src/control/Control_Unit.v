@@ -19,6 +19,10 @@ module Control_Unit (
     // Reset
     output reg Reset_Signal,
 
+    // Math control
+    output reg Div_Control,
+    output reg Mult_Control,
+
     // Shift Control
     output reg [2:0] Shift_Control,
 
@@ -488,7 +492,7 @@ always @(posedge Clock) begin
             end
             State_And: begin
                 if (Counter == 6'b000000) begin
-                    State = State_Add;
+                    State = State_And;
 
                     Reg_Dst = 3'b100;       //
                     MemToReg = 4'b0000;     //
@@ -520,14 +524,108 @@ always @(posedge Clock) begin
                 end
             end
             State_Div: begin
+                if (Counter <= 6'b100001) begin
+                    State = State_Div;
+
+                    Div_Control = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b100010) begin
+                    State = State_Common;
+
+                    Div_Control = 1'b0;
+
+                    HI_Src = 1'b1;
+                    LO_Src = 1'b1;
+                    HI_Write = 1'b1;
+                    LO_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Mult: begin
+                if (Counter <= 6'b100000) begin
+                    State = State_Mult;
+
+                    Mult_Control = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b100001) begin
+                    State = State_Common;
+
+                    Mult_Control = 1'b0;
+
+                    HI_Src = 1'b0;
+                    LO_Src = 1'b0;
+                    HI_Write = 1'b1;
+                    LO_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Jr: begin
             end
             State_Mfhi: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Mfhi;
+
+                    Reg_Dst = 3'b100;       //
+                    MemToReg = 4'b0011;     //
+
+                    Reg_Write = 1'b1;       //
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    Reg_Dst = 3'b100;       //
+                    MemToReg = 4'b0011;     //
+
+                    Reg_Write = 1'b0;       //
+
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Mflo: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Mflo;
+
+                    Reg_Dst = 3'b100;       //
+                    MemToReg = 4'b0100;     //
+
+                    Reg_Write = 1'b1;       //
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    Reg_Dst = 3'b100;       //
+                    MemToReg = 4'b0100;     //
+
+                    Reg_Write = 1'b0;       //
+
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Sll: begin
             end
@@ -543,7 +641,7 @@ always @(posedge Clock) begin
             end
             State_Sub: begin
                 if (Counter == 6'b000000) begin
-                    State = State_Add;
+                    State = State_Sub;
 
                     Reg_Dst = 3'b100;       //
                     MemToReg = 4'b0000;     //

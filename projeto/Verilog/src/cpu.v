@@ -12,6 +12,9 @@ module cpu (
     // Control Unit
     wire Reset_Signal;
 
+    wire Div_Control;
+    wire Mult_Control;
+
     wire [2:0] Shift_Control;
     
     wire [1:0] LS_Control;
@@ -44,10 +47,8 @@ module cpu (
     wire [2:0] ALU_Op;
 
     wire AllowException;
-    wire OPCode_Error;
 
     // ALU
-    wire Overflow;
     wire Neg;
     wire Zero;
     wire Eq;
@@ -57,6 +58,13 @@ module cpu (
     wire [31:0] ALU_A;
     wire [31:0] ALU_B;
     wire [31:0] ALU_Result;
+
+    // Exception
+    wire OPCode_Error;
+    wire Overflow;
+    wire Div_Zero;
+    wire Exception_Signal;
+    wire [31:0] Exception_MemPosition;
     
     // Shift Register
     wire [4:0] ShiftReg_Amt;
@@ -114,6 +122,8 @@ module cpu (
         Instr_15_0[5:0],
         Exception_Signal,
         Reset_Signal,
+        Div_Control,
+        Mult_Control,
         Shift_Control,
         LS_Control,
         SS_Control,
@@ -163,6 +173,27 @@ module cpu (
         Mem_WR,
         SSControl_Out,
         Mem_Data
+    );
+
+    Div Div(
+        Clock,
+        Reset_Signal,
+        Div_Control,
+        A_Out,
+        B_Out,
+        Div_Zero,
+        Div_HIOut,
+        Div_LOOut
+    );
+
+    Mult Mult(
+        Clock,
+        Reset_Signal,
+        Mult_Control,
+        A_Out,
+        B_Out,
+        Mult_HIOut,
+        Mult_LOOut
     );
 
     Instr_Reg IR(
@@ -364,16 +395,16 @@ module cpu (
     // HI
     mux_01_32b Mux_HI(
         HI_Src,
-        Div_HIOut,
         Mult_HIOut,
+        Div_HIOut,
         HI_In
     );
 
     // LO
     mux_01_32b Mux_LO(
         LO_Src,
-        Div_LOOut,
         Mult_LOOut,
+        Div_LOOut,
         LO_In
     );
 
