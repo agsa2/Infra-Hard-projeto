@@ -487,6 +487,37 @@ always @(posedge Clock) begin
                 end
             end
             State_And: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Add;
+
+                    Reg_Dst = 3'b100;       //
+                    MemToReg = 4'b0000;     //
+                    ALU_SrcA = 1'b1;        // <----------
+                    ALU_SrcB = 2'b00;       // <----------
+
+                    Reg_Write = 1'b1;       //
+                    ALUOut_Write = 1'b1;    //
+
+                    ALU_Op = 3'b011;        // <----------
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    ALU_SrcA = 1'b00;        //
+                    ALU_SrcB = 2'b00;       //
+                    Reg_Write = 1'b1;       // <----------
+                    ALUOut_Write = 1'b0;    //
+
+                    ALU_Op = 3'b011;        //
+
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Div: begin
             end
@@ -511,6 +542,37 @@ always @(posedge Clock) begin
             State_Srl: begin
             end
             State_Sub: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Add;
+
+                    Reg_Dst = 3'b100;       //
+                    MemToReg = 4'b0000;     //
+                    ALU_SrcA = 1'b1;        // <----------
+                    ALU_SrcB = 2'b00;       // <----------
+
+                    Reg_Write = 1'b1;       //
+                    ALUOut_Write = 1'b1;    //
+
+                    ALU_Op = 3'b010;        // <----------
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    ALU_SrcA = 1'b00;        //
+                    ALU_SrcB = 2'b00;       //
+                    Reg_Write = 1'b1;       // <----------
+                    ALUOut_Write = 1'b0;    //
+
+                    ALU_Op = 3'b010;        //
+
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Break: begin
             end
@@ -552,6 +614,37 @@ always @(posedge Clock) begin
                 end
             end
             State_Addiu: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Add;
+
+                    Reg_Dst = 3'b100;       //
+                    MemToReg = 4'b0000;     //
+                    ALU_SrcA = 1'b1;        // <----------
+                    ALU_SrcB = 2'b00;       // <----------
+
+                    Reg_Write = 1'b1;       //
+                    ALUOut_Write = 1'b1;    //
+
+                    ALU_Op = 3'b001;        // <----------
+
+                    AllowException = 1'b1;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    ALU_SrcA = 1'b00;        //
+                    ALU_SrcB = 2'b00;       //
+                    Reg_Write = 1'b1;       // <----------
+                    ALUOut_Write = 1'b0;    //
+
+                    ALU_Op = 3'b001;        //
+
+                    AllowException = 1'b1;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Beq: begin
             end
