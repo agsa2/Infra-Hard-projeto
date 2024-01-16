@@ -280,6 +280,8 @@ always @(posedge Clock) begin
 
                     ALU_Op = 3'b001;
                     
+                    AllowException = 1'b0;
+                    
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000010) begin
@@ -429,7 +431,7 @@ always @(posedge Clock) begin
 
                 Shift_Control = 3'b0;
 
-                PC_Src = 3'b001;
+                PC_Src = 3'b000;
                 IorD = 2'b0;
                 Reg_Dst = 3'b0;
                 MemToReg = 4'b0;
@@ -673,6 +675,36 @@ always @(posedge Clock) begin
                 end
             end
             State_Break: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Break;
+
+                    ALU_SrcA = 1'b0;        // <----------
+                    ALU_SrcB = 2'b01;       // <----------
+
+                    ALU_Op = 3'b010;        // <----------
+
+                    PC_Src = 3'b000;        // <----------
+                    PC_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    ALU_SrcA = 1'b0;        // <----------
+                    ALU_SrcB = 2'b01;       // <----------
+
+                    ALU_Op = 3'b010;        // <----------
+
+                    PC_Src = 3'b000;        // <----------
+                    PC_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Rte: begin
             end
@@ -713,7 +745,7 @@ always @(posedge Clock) begin
             end
             State_Addiu: begin
                 if (Counter == 6'b000000) begin
-                    State = State_Add;
+                    State = State_Addiu;
 
                     Reg_Dst = 3'b100;       //
                     MemToReg = 4'b0000;     //
