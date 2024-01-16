@@ -1,4 +1,4 @@
-module store_control(
+module store_size_control(
 
     input wire [1:0] SS_control,
     input wire [31:0] B,
