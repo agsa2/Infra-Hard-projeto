@@ -659,7 +659,7 @@ always @(posedge Clock) begin
             end
             State_Slt: begin
                 if (Counter == 6'b000000) begin
-                    State = State_Mflo;
+                    State = State_Slt;
 
                     ALU_SrcA  = 1'b1;
                     ALU_SrcB = 2'b00;
@@ -786,7 +786,7 @@ always @(posedge Clock) begin
             end
             State_Xchg: begin
                 if (Counter == 6'b000000) begin
-                    State = State_Mflo;
+                    State = State_Xchg;
 
                     Reg_Dst = 3'b000;
                     MemToReg = 4'b1001;
@@ -806,11 +806,6 @@ always @(posedge Clock) begin
                     Reg_Dst = 3'b000;
                     MemToReg = 4'b0000;
                     Reg_Write = 1'b0;
-
-                    Reg_Dst = 3'b000;
-                    MemToReg = 4'b0000;
-                    Reg_Write = 1'b0;
-
 
                     AllowException = 1'b0;
                     
@@ -884,32 +879,410 @@ always @(posedge Clock) begin
                 end
             end
             State_Beq: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Beq;
+
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b11;
+                    ALU_Op = 3'b001;
+                    
+                    EQ = 1'b1;
+                    ALU_SrcA = 1'b1;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b111;
+                    PC_Src = 3'b001;
+                    PC_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b000;
+                    
+                    EQ = 1'b0;
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b000;
+                    PC_Src = 3'b000;
+                    PC_Write = 1'b0;
+
+                   
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Bne: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Bne;
+
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b11;
+                    ALU_Op = 3'b001;
+                    
+                    EQ = 1'b0;
+                    ALU_SrcA = 1'b1;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b111;
+                    PC_Src = 3'b001;
+                    PC_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b000;
+                    
+                    EQ = 1'b0;
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b000;
+                    PC_Src = 3'b000;
+                    PC_Write = 1'b0;
+
+                   
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Ble: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Ble;
+
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b11;
+                    ALU_Op = 3'b001;
+                    
+                    GT = 1'b0;
+                    ALU_SrcA = 1'b1;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b111;
+                    PC_Src = 3'b001;
+                    PC_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b000;
+                    
+                    GT = 1'b0;
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b000;
+                    PC_Src = 3'b000;
+                    PC_Write = 1'b0;
+
+                   
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Bgt: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Bgt;
+
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b11;
+                    ALU_Op = 3'b001;
+                    
+                    GT = 1'b1;
+                    ALU_SrcA = 1'b1;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b111;
+                    PC_Src = 3'b001;
+                    PC_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b000;
+                    
+                    GT = 1'b0;
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b000;
+                    PC_Src = 3'b000;
+                    PC_Write = 1'b0;
+
+                   
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Sram: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Sram;
+
+                    ALU_SrcA = 1'b1;
+                    ALU_SrcB = 2'b10;
+                    ALU_Op = 3'b001;
+                    
+                    IorD = 2'b10;
+                    Mem_WR = 1'b0;
+
+                    LS_Control = 2'b00;
+
+                    Reg_Dst = 3'b000;
+                    MemToReg = 4'b0001;
+                    Reg_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b000;
+                    
+                    IorD = 2'b00;
+                    Mem_WR = 1'b0;
+
+                    LS_Control = 2'b00;
+
+                    Reg_Dst = 3'b000;
+                    MemToReg = 4'b0000;
+                    Reg_Write = 1'b0;
+                   
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Lb: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Lb;
+
+                    ALU_SrcA = 1'b1;
+                    ALU_SrcB = 2'b11;
+                    ALU_Op = 3'b001;
+                    
+                    IorD = 2'b10;
+                    Mem_WR = 1'b0;
+
+                    LS_Control = 2'b01;
+
+                    Reg_Dst = 3'b000;
+                    MemToReg = 4'b0011;
+                    Reg_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b000;
+                    
+                    IorD = 2'b00;
+                    Mem_WR = 1'b0;
+
+                    LS_Control = 2'b00;
+
+                    Reg_Dst = 3'b000;
+                    MemToReg = 4'b0000;
+                    Reg_Write = 1'b0;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Lh: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Lh;
+
+                    ALU_SrcA = 1'b1;
+                    ALU_SrcB = 2'b11;
+                    ALU_Op = 3'b001;
+                    
+                    IorD = 2'b10;
+                    Mem_WR = 1'b0;
+
+                    LS_Control = 2'b10;
+
+                    Reg_Dst = 3'b000;
+                    MemToReg = 4'b0011;
+                    Reg_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b000;
+                    
+                    IorD = 2'b00;
+                    Mem_WR = 1'b0;
+
+                    LS_Control = 2'b00;
+
+                    Reg_Dst = 3'b000;
+                    MemToReg = 4'b0000;
+                    Reg_Write = 1'b0;
+                   
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Lui: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Lui;
+
+                    Reg_Dst = 3'b000;
+                    MemToReg = 4'b0110;
+                    Reg_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    Reg_Dst = 3'b000;
+                    MemToReg = 4'b0000;
+                    Reg_Write = 1'b0;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Lw: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Lw;
+
+                    ALU_SrcA = 1'b1;
+                    ALU_SrcB = 2'b11;
+                    ALU_Op = 3'b001;
+                    
+                    IorD = 2'b10;
+                    Mem_WR = 1'b0;
+
+                    LS_Control = 2'b00;
+
+                    Reg_Dst = 3'b000;
+                    MemToReg = 4'b0011;
+                    Reg_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b000;
+                    
+                    IorD = 2'b00;
+                    Mem_WR = 1'b0;
+
+                    LS_Control = 2'b00;
+
+                    Reg_Dst = 3'b000;
+                    MemToReg = 4'b0000;
+                    Reg_Write = 1'b0;
+                   
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Sb: begin
             end
             State_Sh: begin
             end
             State_Slti: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Slti;
+
+                    ALU_SrcA = 1'b1;
+                    ALU_SrcB = 2'b10;
+                    ALU_Op = 3'b111;
+                    Reg_Dst = 3'b000;
+                    MemToReg = 4'b0000;
+                    Reg_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b000;
+                    Reg_Dst = 3'b000;
+                    MemToReg = 4'b0000;
+                    Reg_Write = 1'b0;
+                   
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Sw: begin
             end
             State_J: begin
+                if (Counter == 6'b000000) begin
+                    State = State_J;
+
+                    PC_Src = 3'b010;
+                    PC_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+                    
+                    PC_Src = 3'b000;
+                    PC_Write = 1'b0;
+                   
+                    AllowException = 1'b0;
+                    
+                    Counter = 6'b000000;
+                end
             end
             State_Jal: begin
             end
