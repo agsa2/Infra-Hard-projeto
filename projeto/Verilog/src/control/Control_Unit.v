@@ -377,6 +377,70 @@ always @(posedge Clock) begin
                             State = State_Addi;
                             OPCode_Error = 1'b0;
                         end
+                        OPCode_Addiu: begin
+                            State = State_Addiu;
+                            OPCode_Error = 1'b0;
+                        end
+                        OPCode_Beq: begin
+                            State = State_Beq;
+                            OPCode_Error = 1'b0;
+                        end
+                        OPCode_Bne: begin
+                            State = State_Bne;
+                            OPCode_Error = 1'b0;
+                        end
+                        OPCode_Ble: begin
+                            State = State_Ble;
+                            OPCode_Error = 1'b0;
+                        end
+                        OPCode_Bgt: begin
+                            State = State_Bgt;
+                            OPCode_Error = 1'b0;
+                        end
+                        OPCode_Sram: begin
+                            State = State_Sram;
+                            OPCode_Error = 1'b0;
+                        end
+                        OPCode_Lb: begin
+                            State = State_Lb;
+                            OPCode_Error = 1'b0;
+                        end
+                        OPCode_Lh: begin
+                            State = State_Lh;
+                            OPCode_Error = 1'b0;
+                        end
+                        OPCode_Lui: begin
+                            State = State_Lui;
+                            OPCode_Error = 1'b0;
+                        end
+                        OPCode_Lw: begin
+                            State = State_Lw;
+                            OPCode_Error = 1'b0;
+                        end
+                        OPCode_Sb: begin
+                            State = State_Sb;
+                            OPCode_Error = 1'b0;
+                        end
+                        OPCode_Sh: begin
+                            State = State_Sh;
+                            OPCode_Error = 1'b0;
+                        end
+                        OPCode_Slti: begin
+                            State = State_Slti;
+                            OPCode_Error = 1'b0;
+                        end
+                        OPCode_Sw: begin
+                            State = State_Sw;
+                            OPCode_Error = 1'b0;
+                        end
+                        OPCode_J: begin
+                            State = State_J;
+                            OPCode_Error = 1'b0;
+                        end
+                        OPCode_Jal: begin
+                            State = State_Jal;
+                            OPCode_Error = 1'b0;
+                        end
                         default: begin
                             State = State_Exception;
 
@@ -418,7 +482,9 @@ always @(posedge Clock) begin
 
                     ALU_Op = 3'b001;        // <----------
 
-                    AllowException = 1'b0;
+                    if (Exception_Signal) begin
+                        State = State_Exception;
+                    end
                     
                     Counter =  6'b000000;
                 end
@@ -1650,6 +1716,29 @@ always @(posedge Clock) begin
                    
                     AllowException = 1'b0;
                     
+                    Counter = 6'b000000;
+                end
+            end
+            State_Exception: begin
+                if (Counter == 6'b000000) begin
+                    State = State_Exception;
+
+                    IorD = 2'b11;
+                    Mem_WR = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000001) begin
+                    State = State_Common;
+                    
+                    IorD = 2'b11;
+                    Mem_WR = 1'b0;
+
+                    MDR_Write = 1'b1;
+                    LS_Control = 2'b10;
+
+                    PC_Src = 3'b100;
+
                     Counter = 6'b000000;
                 end
             end

@@ -106,7 +106,6 @@ module cpu (
     wire [31:0] Imm_SignExtSL2;     // Imm_SignExtSL2: Saída do ShiftL_2 e entrada do mux MemToReg
 
     wire [31:0] SignExt_1_32_Out;
-    wire [31:0] SignExt_8_32_Out;   // SignExt_8_32_Out: Saída do SignExt_8_32 e entrada do mux PCSrc
 
     wire [27:0] ShiftL_26_28_Out;   // ShiftL_26_28_Out: Saída do ShiftL_26_28 e parte do Jump_Address
     wire [31:0] Jump_Address;       // Jump_Address: Saída do ... e entrada do mux PCSrc
@@ -329,6 +328,16 @@ module cpu (
         SSControl_Out
     );
 
+    // Exception Control
+    Exception_Control Exception_Control(
+        AllowException,
+        OPCode_Error,
+        Overflow,
+        Div_Zero,
+        Exception_Signal,
+        Exception_MemPosition
+    );
+
     // Muxes
     // PCSrc
     mux_PCSrc Mux_PCSrc(
@@ -337,7 +346,7 @@ module cpu (
         ALUOut_Result,
         Jump_Address,
         EPC_Out,
-        SignExt_8_32_Out,
+        LSControl_Out,
         PC_In
     );
 
@@ -347,7 +356,7 @@ module cpu (
         PC_Out,
         ALUOut_Result,
         ALU_Result,
-        EPC_Out,
+        Exception_MemPosition,
         Mem_Address
     );
 
@@ -451,12 +460,6 @@ module cpu (
     extend_1_32 SignExt_1_32(
         Lt,
         SignExt_1_32_Out
-    );
-
-    // SignExt_8_32
-    extend_8_32 SignExt_8_32(
-        LSControl_Out[7:0],
-        SignExt_8_32_Out
     );
 
     // SignExt_16_32
