@@ -1,96 +1,3287 @@
-# Error opening C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\Memoria.vhd
-# Path name 'C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\Memoria.vhd' doesn't exist.
-# Error opening C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\Memoria.vhd
-# Path name 'C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\Memoria.vhd' doesn't exist.
-# Error opening C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\Memoria.vhd
-# Path name 'C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\Memoria.vhd' doesn't exist.
-# Compile of extend_28_32.v was successful.
-# Compile of shift_left_2.v was successful.
-# Compile of shift_left_16.v was successful.
-# Compile of shift_left_26_28.v was successful.
-# Compile of sign_extend_8_32.v was successful.
-# Compile of sign_extend_16_32.v was successful.
-# Compile of load_size_control.v was successful.
-# Compile of mdr.v was successful.
-# Compile of store_control.v was successful.
-# 9 compiles, 14 failed with no errors.
-# Compile of store_control.v was successful.
-# Compile of mdr.v was successful.
-# Compile of load_size_control.v was successful.
-# Compile of load_size_control.v was successful.
-# ** Error: Aes eao
-#        Unable to replace existing ini file (C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Modelsim/InfraHard.mpf).  File can not be renamed.
-vsim work.mdr
-# End time: 21:10:16 on Jan 09,2024, Elapsed time: 0:03:42
-# Errors: 1, Warnings: 7
-# vsim work.mdr 
-# Start time: 21:10:16 on Jan 09,2024
-# Loading work.mdr
-add wave sim:/mdr/*
-force -freeze sim:/mdr/memData 00000100000000100000000000010000 0
-run
-# Compile of mdr.v was successful.
-vsim work.mdr
-# End time: 21:23:01 on Jan 09,2024, Elapsed time: 0:12:45
-# Errors: 0, Warnings: 2
-# vsim work.mdr 
-# Start time: 21:23:01 on Jan 09,2024
-# Loading work.mdr
-add wave sim:/mdr/*
-force -freeze sim:/mdr/memData 00000000000000000000000000010001 0
-force -freeze sim:/mdr/mdr_out xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
-run
-force -freeze sim:/mdr/mdr_out 0 0
-run
-noforce sim:/mdr/mdr_out
-run
-vsim work.store_control
-# End time: 21:25:28 on Jan 09,2024, Elapsed time: 0:02:27
-# Errors: 0, Warnings: 1
-# vsim work.store_control 
-# Start time: 21:25:28 on Jan 09,2024
-# Loading work.store_control
-add wave sim:/store_control/*
-force -freeze sim:/store_control/SS_control 00 0
-force -freeze sim:/store_control/B 00000000010000100100010000100000 0
-force -freeze sim:/store_control/mdr_input 00100000100000000000000000000000 0
-force -freeze sim:/store_control/SS_out xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
-force -freeze sim:/store_control/SWH xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
-run
-noforce sim:/store_control/SS_out
-noforce sim:/store_control/SWH
-run
-force -freeze sim:/store_control/SS_control 01 0
-run
-force -freeze sim:/store_control/SS_control 10 0
-run
-vsim work.load_size_control
-# ** Error: Aes eao
-#        Unable to replace existing ini file (C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Modelsim/InfraHard.mpf).  File can not be renamed.
-# End time: 21:30:46 on Jan 09,2024, Elapsed time: 0:05:18
-# Errors: 1, Warnings: 1
-# vsim work.load_size_control 
-# Start time: 21:30:46 on Jan 09,2024
+vsim work.cpu
+# vsim work.cpu 
+# Start time: 14:42:55 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
 # Loading work.load_size_control
-add wave sim:/load_size_control/*
-force -freeze sim:/load_size_control/LS_control 00 0
-force -freeze sim:/load_size_control/mdr_input 00000010000010000010000010000000 0
-force -freeze sim:/load_size_control/LS_out xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
-force -freeze sim:/load_size_control/LWH xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
-noforce sim:/load_size_control/LS_control
-noforce sim:/load_size_control/mdr_input
-noforce sim:/load_size_control/LS_out
-noforce sim:/load_size_control/LWH
-noforce sim:/load_size_control/LWH
-run
-force -freeze sim:/load_size_control/LS_control 00 0
-force -freeze sim:/load_size_control/mdr_input 00000100001000100010001000010001 0
-noforce sim:/load_size_control/LS_out
-noforce sim:/load_size_control/LWH
-run
-force -freeze sim:/load_size_control/LS_control 01 0
-run
-force -freeze sim:/load_size_control/LS_control 10 0
-run
-# End time: 21:40:26 on Jan 09,2024, Elapsed time: 0:09:40
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# Error opening C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Banco_reg.vhd.vhd
+# Path name 'C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Banco_reg.vhd.vhd' doesn't exist.
+# Compile of Control_Unit.v was successful with warnings.
+vsim work.Control_Unit
+# End time: 14:45:28 on Feb 03,2024, Elapsed time: 0:02:33
+# Errors: 0, Warnings: 8
+# vsim work.Control_Unit 
+# Start time: 14:45:28 on Feb 03,2024
+# Loading work.Control_Unit
+vsim work.cpu
+# End time: 14:45:38 on Feb 03,2024, Elapsed time: 0:00:10
 # Errors: 0, Warnings: 1
+# vsim work.cpu 
+# Start time: 14:45:38 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 100000000ps sim:/cpu/Reset
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# Control_Unit
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 10000000ps sim:/cpu/Reset
+# /cpu/Reset already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 100000000ps sim:/cpu/Clock
+# Control_Unit
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 100000000ps sim:/cpu/Reset
+# /cpu/Reset already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+add wave -position end  sim:/cpu/Shift_Control
+add wave -position end  sim:/cpu/MemToReg
+add wave -position end  sim:/cpu/ALU_SrcA
+add wave -position end  sim:/cpu/ALU_SrcB
+add wave -position end  sim:/cpu/Mem_WR
+add wave -position end  sim:/cpu/ALUOut_Write
+add wave -position end  sim:/cpu/ALU_Op
+add wave -position end  sim:/cpu/ALU_A
+add wave -position end  sim:/cpu/ALU_B
+add wave -position end  sim:/cpu/ALU_Result
+add wave -position end  sim:/cpu/ALUOut_Result
+add wave -position end  sim:/cpu/Mem_Address
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+add wave -position end  sim:/cpu/Instr_31_26
+add wave -position end  sim:/cpu/Instr_25_21
+add wave -position end  sim:/cpu/Instr_20_16
+add wave -position end  sim:/cpu/Instr_15_0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Control_Unit.v was successful with warnings.
+vsim work.cpu
+# End time: 15:19:04 on Feb 03,2024, Elapsed time: 0:33:26
+# Errors: 11, Warnings: 22
+# vsim work.cpu 
+# Start time: 15:19:04 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000000000ps sim:/cpu/Reset
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# cpu
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000000000ps sim:/cpu/Clock
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000000000ps sim:/cpu/Clock
+# /cpu/Clock already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+# cpu
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+add wave -position end  sim:/cpu/ALUOut_Write
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Control_Unit.v was successful with warnings.
+vsim work.cpu
+# End time: 15:28:18 on Feb 03,2024, Elapsed time: 0:09:14
+# Errors: 11, Warnings: 22
+# vsim work.cpu 
+# Start time: 15:28:18 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000000000ps sim:/cpu/Reset
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# cpu
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000000000ps sim:/cpu/Clock
+# cpu
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+# Error opening C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Banco_reg.vhd.vhd
+# Path name 'C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Banco_reg.vhd.vhd' doesn't exist.
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Control_Unit.v was successful with warnings.
+vsim work.cpu
+# ** Error: Aes eao
+#        Unable to replace existing ini file (C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Modelsim/InfraHard.mpf).  File can not be renamed.
+# End time: 15:32:06 on Feb 03,2024, Elapsed time: 0:03:48
+# Errors: 12, Warnings: 22
+# vsim work.cpu 
+# Start time: 15:32:06 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 10000000ps sim:/cpu/Reset
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# cpu
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 100000000ps sim:/cpu/Clock
+# cpu
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Control_Unit.v was successful with warnings.
+vsim work.cpu
+# End time: 15:37:15 on Feb 03,2024, Elapsed time: 0:05:09
+# Errors: 11, Warnings: 22
+# vsim work.cpu 
+# Start time: 15:37:15 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000000000ps sim:/cpu/Reset
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# cpu
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 100000000ps sim:/cpu/Clock
+# cpu
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Control_Unit.v was successful with warnings.
+vsim work.cpu
+# End time: 15:40:56 on Feb 03,2024, Elapsed time: 0:03:41
+# Errors: 11, Warnings: 22
+# vsim work.cpu 
+# Start time: 15:40:56 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000000000ps sim:/cpu/Reset
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# cpu
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000000000ps sim:/cpu/Clock
+# cpu
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Control_Unit.v was successful with warnings.
+vsim work.cpu
+# End time: 15:43:33 on Feb 03,2024, Elapsed time: 0:02:37
+# Errors: 11, Warnings: 22
+# vsim work.cpu 
+# Start time: 15:43:33 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 100000000ps sim:/cpu/Reset
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# cpu
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000000000ps sim:/cpu/Clock
+# cpu
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Control_Unit.v was successful with warnings.
+vsim work.cpu
+# End time: 15:46:21 on Feb 03,2024, Elapsed time: 0:02:48
+# Errors: 11, Warnings: 22
+# vsim work.cpu 
+# Start time: 15:46:21 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000000000ps sim:/cpu/Reset
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# cpu
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000000000ps sim:/cpu/Clock
+# cpu
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Control_Unit.v was successful with warnings.
+vsim work.cpu
+# End time: 16:02:55 on Feb 03,2024, Elapsed time: 0:16:34
+# Errors: 11, Warnings: 22
+# vsim work.cpu 
+# Start time: 16:02:55 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000000000ps sim:/cpu/Reset
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# cpu
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000000000ps sim:/cpu/Clock
+# cpu
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Control_Unit.v was successful with warnings.
+vsim work.cpu
+# End time: 16:07:02 on Feb 03,2024, Elapsed time: 0:04:07
+# Errors: 11, Warnings: 22
+# vsim work.cpu 
+# Start time: 16:07:02 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000000000ps sim:/cpu/Reset
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# cpu
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000000000ps sim:/cpu/Clock
+# cpu
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Control_Unit.v was successful with warnings.
+vsim work.cpu
+# End time: 16:21:33 on Feb 03,2024, Elapsed time: 0:14:31
+# Errors: 11, Warnings: 22
+# vsim work.cpu 
+# Start time: 16:21:33 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000000000ps sim:/cpu/Reset
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# cpu
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000000000ps sim:/cpu/Clock
+# cpu
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Control_Unit.v was successful with warnings.
+vsim work.cpu
+# End time: 16:37:41 on Feb 03,2024, Elapsed time: 0:16:08
+# Errors: 11, Warnings: 22
+# vsim work.cpu 
+# Start time: 16:37:41 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+vsim work.cpu
+# End time: 16:38:07 on Feb 03,2024, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 7
+# vsim work.cpu 
+# Start time: 16:38:07 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000000000ps sim:/cpu/Reset
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# cpu
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000000000ps sim:/cpu/Clock
+# cpu
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Control_Unit.v was successful with warnings.
+vsim work.cpu
+# End time: 16:52:34 on Feb 03,2024, Elapsed time: 0:14:27
+# Errors: 11, Warnings: 22
+# vsim work.cpu 
+# Start time: 16:52:34 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000000000ps sim:/cpu/Reset
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# cpu
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000000000ps sim:/cpu/Clock
+# cpu
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Error opening C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Banco_reg.vhd.vhd
+# Path name 'C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Banco_reg.vhd.vhd' doesn't exist.
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.cpu
+# End time: 17:18:08 on Feb 03,2024, Elapsed time: 0:25:34
+# Errors: 11, Warnings: 21
+# vsim work.cpu 
+# Start time: 17:18:08 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000000000ps sim:/cpu/Clock
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# cpu
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000000000ps sim:/cpu/Reset
+# cpu
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+# Error opening C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Banco_reg.vhd.vhd
+# Path name 'C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Banco_reg.vhd.vhd' doesn't exist.
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Control_Unit.v was successful with warnings.
+vsim work.cpu
+# End time: 17:32:30 on Feb 03,2024, Elapsed time: 0:14:22
+# Errors: 11, Warnings: 22
+# vsim work.cpu 
+# Start time: 17:32:30 on Feb 03,2024
+# Loading work.cpu
+# Loading work.Control_Unit
+# Loading work.Div
+# Loading work.Mult
+# Loading work.load_size_control
+# Loading work.store_size_control
+# Loading work.Exception_Control
+# Loading work.mux_PCSrc
+# Loading work.mux_IorD
+# Loading work.mux_RegDest
+# Loading work.mux_MemToReg
+# Loading work.mux_01_32b
+# Loading work.mux_ALUSrcB
+# Loading work.mux_ShiftAmt
+# Loading work.shift_left_2
+# Loading work.shift_left_16
+# Loading work.shift_left_26_28
+# Loading work.extend_1_32
+# Loading work.extend_16_32
+# Loading work.extend_28_32
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.ula32(behavioral)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.regdesloc(behavioral_arch)
+# Loading work.registrador(behavioral_arch)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+wave create -driver freeze -pattern constant -value 0 -starttime 0ps -endtime 1000000000ps sim:/cpu/Reset
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# cpu
+wave create -driver freeze -pattern clock -initialvalue 0 -period 100ps -dutycycle 50 -starttime 0ps -endtime 1000000000ps sim:/cpu/Clock
+# cpu
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rs'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'rd'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'RegDest_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Reg_Dst File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 364
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'Shamt'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'ShiftAMt_Out'. The port definition is at: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mux_Shift_Amt File: C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v Line: 429
+run
+# GetModuleFileName: Não foi possível encontrar o módulo especificado.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Regs
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/Mem
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 22:55:11 on Feb 03,2024, Elapsed time: 5:22:41
+# Errors: 11, Warnings: 21

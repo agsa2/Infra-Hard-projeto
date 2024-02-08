@@ -1,5 +1,5 @@
 module mux_RegDest (
-    input  wire [2:0]  RegDest,
+    input  wire [2:0] RegDest,
     input  wire [4:0] rt,
     input  wire [4:0] rs,
     input  wire [4:0] rd,

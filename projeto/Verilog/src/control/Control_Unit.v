@@ -733,7 +733,7 @@ always @(posedge Clock) begin
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000001) begin
-                    State = State_Common;
+                    State = State_Sll;
 
                     Shift_Src = 2'b00;
 
@@ -749,7 +749,7 @@ always @(posedge Clock) begin
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000010) begin
-                    State =State_Common;
+                    State = State_Sll;
 
                     Shift_Amt = 3'b000;
                     Shift_Control = 3'b010;
@@ -757,6 +757,15 @@ always @(posedge Clock) begin
                     MemToReg = 4'b0111;
                     Reg_Dst = 3'b100;
                     Reg_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                     Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000011) begin
+                    State = State_Common;
+
+                    Reg_Write = 1'b0;
 
                     AllowException = 1'b0;
                     
@@ -777,7 +786,7 @@ always @(posedge Clock) begin
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000001) begin
-                    State = State_Common;
+                    State = State_Sllv;
 
                     Shift_Src = 2'b01;
 
@@ -793,7 +802,7 @@ always @(posedge Clock) begin
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000010) begin
-                    State =State_Common;
+                    State =State_Sllv;
 
                     Shift_Amt = 3'b010;
                     Shift_Control = 3'b110;
@@ -801,6 +810,15 @@ always @(posedge Clock) begin
                     MemToReg = 4'b0111;
                     Reg_Dst = 3'b100;
                     Reg_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000011) begin
+                    State =State_Common;
+
+                    Reg_Write = 1'b0;
 
                     AllowException = 1'b0;
                     
@@ -829,10 +847,8 @@ always @(posedge Clock) begin
 
                     ALU_SrcA  = 1'b0;
                     ALU_SrcB = 2'b00;
-                    ALU_Op = 3'b000;
-                    MemToReg = 4'b0000;
-                    Reg_Dst = 3'b000;
-                    Reg_Write = 1'b1;
+                    ALU_Op = 3'b001;
+                    Reg_Write = 1'b0;
 
                     AllowException = 1'b0;
                     
@@ -853,7 +869,7 @@ always @(posedge Clock) begin
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000001) begin
-                    State = State_Common;
+                    State = State_Sra;
 
                     Shift_Src = 2'b00;
 
@@ -869,7 +885,7 @@ always @(posedge Clock) begin
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000010) begin
-                    State =State_Common;
+                    State =State_Sra;
 
                     Shift_Amt = 3'b000;
                     Shift_Control = 3'b100;
@@ -877,6 +893,15 @@ always @(posedge Clock) begin
                     MemToReg = 4'b0111;
                     Reg_Dst = 3'b100;
                     Reg_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000011) begin
+                    State =State_Common;
+
+                    Reg_Write = 1'b0;
 
                     AllowException = 1'b0;
                     
@@ -897,7 +922,7 @@ always @(posedge Clock) begin
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000001) begin
-                    State = State_Common;
+                    State = State_Srav;
 
                     Shift_Src = 2'b01;
 
@@ -913,7 +938,7 @@ always @(posedge Clock) begin
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000010) begin
-                    State =State_Common;
+                    State =State_Srav;
 
                     Shift_Amt = 3'b010;
                     Shift_Control = 3'b101;
@@ -921,6 +946,15 @@ always @(posedge Clock) begin
                     MemToReg = 4'b0111;
                     Reg_Dst = 3'b100;
                     Reg_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000011) begin
+                    State =State_Common;
+
+                    Reg_Write = 1'b0;
 
                     AllowException = 1'b0;
                     
@@ -941,7 +975,7 @@ always @(posedge Clock) begin
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000001) begin
-                    State = State_Common;
+                    State = State_Srl;
 
                     Shift_Src = 2'b00;
 
@@ -957,7 +991,7 @@ always @(posedge Clock) begin
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000010) begin
-                    State =State_Common;
+                    State =State_Srl;
 
                     Shift_Amt = 3'b000;
                     Shift_Control = 3'b011;
@@ -965,6 +999,15 @@ always @(posedge Clock) begin
                     MemToReg = 4'b0111;
                     Reg_Dst = 3'b100;
                     Reg_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000011) begin
+                    State =State_Common;
+
+                    Reg_Write = 1'b0;
 
                     AllowException = 1'b0;
                     
@@ -1076,11 +1119,20 @@ always @(posedge Clock) begin
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000001) begin
-                    State = State_Common;
+                    State = State_Xchg;
 
                     Reg_Dst = 3'b001;
                     MemToReg = 4'b1000;
                     Reg_Write = 1'b1;
+
+                    AllowException = 1'b0;
+                    
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000010) begin
+                    State = State_Common;
+
+                    Reg_Write = 1'b0;
 
                     AllowException = 1'b0;
                     
@@ -1161,7 +1213,7 @@ always @(posedge Clock) begin
                     ALU_SrcB = 2'b11;
                     ALU_Op = 3'b001;
                     
-                    EQ = 1'b1;
+                   // EQ = 1'b1;
                     ALU_SrcA = 1'b1;
                     ALU_SrcB = 2'b00;
                     ALU_Op = 3'b111;
@@ -1179,7 +1231,7 @@ always @(posedge Clock) begin
                     ALU_SrcB = 2'b00;
                     ALU_Op = 3'b001;
                     
-                    EQ = 1'b1;
+                  //  EQ = 1'b1;
                     ALU_SrcA = 1'b1;
                     ALU_SrcB = 2'b00;
                     ALU_Op = 3'b111;
@@ -1199,7 +1251,7 @@ always @(posedge Clock) begin
                     ALU_SrcB = 2'b11;
                     ALU_Op = 3'b001;
                     
-                    EQ = 1'b0;
+                   // EQ = 1'b0;
                     ALU_SrcA = 1'b1;
                     ALU_SrcB = 2'b00;
                     ALU_Op = 3'b111;
@@ -1217,7 +1269,7 @@ always @(posedge Clock) begin
                     ALU_SrcB = 2'b00;
                     ALU_Op = 3'b001;
                     
-                    EQ = 1'b0;
+                    //EQ = 1'b0;
                     ALU_SrcA = 1'b1;
                     ALU_SrcB = 2'b00;
                     ALU_Op = 3'b111;
@@ -1237,7 +1289,7 @@ always @(posedge Clock) begin
                     ALU_SrcB = 2'b11;
                     ALU_Op = 3'b001;
                     
-                    GT = 1'b0;
+                   // GT = 1'b0;
                     ALU_SrcA = 1'b1;
                     ALU_SrcB = 2'b00;
                     ALU_Op = 3'b111;
@@ -1255,7 +1307,7 @@ always @(posedge Clock) begin
                     ALU_SrcB = 2'b00;
                     ALU_Op = 3'b001;
                     
-                    GT = 1'b0;
+                   // GT = 1'b0;
                     ALU_SrcA = 1'b1;
                     ALU_SrcB = 2'b00;
                     ALU_Op = 3'b111;
@@ -1275,7 +1327,7 @@ always @(posedge Clock) begin
                     ALU_SrcB = 2'b11;
                     ALU_Op = 3'b001;
                     
-                    GT = 1'b1;
+                   // GT = 1'b1;
                     ALU_SrcA = 1'b1;
                     ALU_SrcB = 2'b00;
                     ALU_Op = 3'b111;
@@ -1293,7 +1345,7 @@ always @(posedge Clock) begin
                     ALU_SrcB = 2'b00;
                     ALU_Op = 3'b001;
                     
-                    GT = 1'b1;
+                   // GT = 1'b1;
                     ALU_SrcA = 1'b1;
                     ALU_SrcB = 2'b00;
                     ALU_Op = 3'b111;
