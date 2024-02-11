@@ -11,42 +11,42 @@ z2
 cModel Technology
 dC:/WINDOWS/System32
 Ebanco_reg
-Z0 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-32
-Z3 !s110 1704395585
-!i10b 1
-Z4 w1703264687
-!i122 20
-Z5 dC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Modelsim
-Z6 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Banco_reg.vhd.vhd
-Z7 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Banco_reg.vhd.vhd
+Z0 w1704420864
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 118
+Z4 dC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Modelsim
+Z5 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Banco_reg.vhd
+Z6 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Banco_reg.vhd
 l0
 L69 1
 V:adHbk0Ym0TAKYW83J5Y[3
 !s100 hZ46CT_BzQl8j]02_Vf=o2
-Z8 OV;C;2020.1;71
-Z9 !s108 1704395585.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Banco_reg.vhd.vhd|
-Z11 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Banco_reg.vhd.vhd|
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1707677538
+!i10b 1
+Z9 !s108 1707677538.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Banco_reg.vhd|
+Z11 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Banco_reg.vhd|
 !i113 1
 Z12 o-work work -2002 -explicit
 Z13 tExplicit 1 CvgOpt 0
 Abehavioral_arch
-R0
 R1
 R2
-DEx4 work 9 banco_reg 0 22 :adHbk0Ym0TAKYW83J5Y[3
-32
 R3
-!i10b 1
-!i122 20
+DEx4 work 9 banco_reg 0 22 :adHbk0Ym0TAKYW83J5Y[3
+!i122 118
 l93
 L85 34
 VY7l=BkTbhRVIWWGL4mMo60
 !s100 RmVnX=Z0eZ>VP`R`^LJ]Q1
+R7
+32
 R8
+!i10b 1
 R9
 R10
 R11
@@ -54,70 +54,70 @@ R11
 R12
 R13
 vControl_Unit
-!s110 1706992338
+!s110 1707685658
 !i10b 1
-!s100 kZ;j@aiDMG4`]?6z]dM]L2
+!s100 c:eAXQFndPGUi??:aj1DU2
 Z14 !s11b Dg1SIo80bB@j0V0VzS_@n1
-InT720MTA7k[Da:ON?XEb32
+I_66CK3K<9[2zn^jh<0AbN2
 Z15 VDg1SIo80bB@j0V0VzS_@n1
-R5
-w1706992283
-8C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\Control_Unit.v
-FC:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\Control_Unit.v
-!i122 82
-L0 1 1802
+R4
+w1707685588
+8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/Control_Unit.v
+FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/Control_Unit.v
+!i122 124
+L0 1 1734
 Z16 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1706992338.000000
-!s107 C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\Control_Unit.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\Control_Unit.v|
+!s108 1707685658.000000
+!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/Control_Unit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/Control_Unit.v|
 !i113 1
 Z17 o-work work
 Z18 tCvgOpt 0
 n@control_@unit
 vcpu
-!s110 1706823375
+Z19 !s110 1707573607
 !i10b 1
 !s100 n;YD@BZ]E0hb5m4F:NQ:^2
 R14
-IO8QVSBL=aDLaB3BKaSkAe0
+I:XWazT>D[GN_Gi^kHZUI]1
 R15
-R5
+R4
 w1706822500
-8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v
-FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v
-!i122 68
+8C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\cpu.v
+FC:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\cpu.v
+!i122 96
 L0 1 477
 R16
 r1
 !s85 0
 31
-!s108 1706823375.000000
-!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/cpu.v|
+Z20 !s108 1707573607.000000
+!s107 C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\cpu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\cpu.v|
 !i113 1
 R17
 R18
 vDiv
-!s110 1706815198
+R19
 !i10b 1
 !s100 z:o^Q:Aad[bZ6dC;ajK;b3
 R14
 IVAf9Indi>bU9lF?I_>ki91
 R15
-R5
-Z19 w1704847291
+R4
+Z21 w1704847291
 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/math/Div.v
 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/math/Div.v
-!i122 61
+!i122 97
 L0 1 100
 R16
 r1
 !s85 0
 31
-!s108 1706815198.000000
+R20
 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/math/Div.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/math/Div.v|
 !i113 1
@@ -125,23 +125,23 @@ R17
 R18
 n@div
 vException_Control
-!s110 1706815185
+Z22 !s110 1707573608
 !i10b 1
 !s100 zmIicfgeM6fhD67Qh=5L63
 R14
 ImXU<oV_M7_OGcl5Mh;@P80
 R15
-R5
-w1704420864
+R4
+R0
 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/Exception_Control.v
 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/Exception_Control.v
-!i122 59
+!i122 100
 L0 1 21
 R16
 r1
 !s85 0
 31
-!s108 1706815185.000000
+Z23 !s108 1707573608.000000
 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/Exception_Control.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/Exception_Control.v|
 !i113 1
@@ -149,432 +149,439 @@ R17
 R18
 n@exception_@control
 vextend_16_32
-Z20 !s110 1704845334
+Z24 !s110 1707573605
 !i10b 1
 !s100 DYG;Q9zPjNLkKRDP;Hjo;1
 R14
-Ijd@:AYi38iK`6`1^D6Cld1
+I9Pn]Lb=g:`l[az_CZc`bW2
 R15
-R5
+R4
 w1704474741
-8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/sign_extend_16_32.v
-FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/sign_extend_16_32.v
-!i122 48
-Z21 L0 1 8
+8C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\shifts\sign_extend_16_32.v
+FC:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\shifts\sign_extend_16_32.v
+!i122 93
+Z25 L0 1 8
 R16
 r1
 !s85 0
 31
-Z22 !s108 1704845334.000000
-!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/sign_extend_16_32.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/sign_extend_16_32.v|
+Z26 !s108 1707573605.000000
+!s107 C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\shifts\sign_extend_16_32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\shifts\sign_extend_16_32.v|
 !i113 1
 R17
 R18
 vextend_1_32
-!s110 1704478214
-R15
-r1
-!s85 0
+!s110 1707677157
 !i10b 1
 !s100 fZ<:PeMW:NOLlIV>CzZ7X3
-ID]ckPgAU9R`5SXbVO>mTd0
-R5
+R14
+IXQkjBfnG:aoeW=kJNObdP1
+R15
+R4
 w1704478088
-8C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\shifts\sign_extend_1_32.v
-FC:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\shifts\sign_extend_1_32.v
-!i122 42
-R21
+8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/extend_1_32.v
+FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/extend_1_32.v
+!i122 115
+R25
 R16
+r1
+!s85 0
 31
-!s108 1704478213.000000
-!s107 C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\shifts\sign_extend_1_32.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\shifts\sign_extend_1_32.v|
+!s108 1707677157.000000
+!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/extend_1_32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/extend_1_32.v|
 !i113 1
 R17
 R18
 vextend_28_32
-Z23 !s110 1704845332
+!s110 1707574210
 !i10b 1
 !s100 ;jSWIB_6[I]8LC1G8]_8P3
 R14
 IHc`hl1^R_Cf]Je:Pl9n4n0
 R15
-R5
+R4
 w1704470958
 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/extend_28_32.v
 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/extend_28_32.v
-!i122 43
-Z24 L0 1 9
+!i122 110
+Z27 L0 1 9
 R16
 r1
 !s85 0
 31
-Z25 !s108 1704845332.000000
+!s108 1707574210.000000
 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/extend_28_32.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/extend_28_32.v|
 !i113 1
 R17
 R18
 vextend_8_32
-R20
+R24
 !i10b 1
 !s100 [4bQGUJTNJOd:W0C8LSeC3
 R14
 IM><<aej_X11i9VhkMz[2[0
 R15
-R5
+R4
 w1704473226
 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/sign_extend_8_32.v
 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/sign_extend_8_32.v
-!i122 47
-R21
+!i122 92
+R25
 R16
 r1
 !s85 0
 31
-R22
+R26
 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/sign_extend_8_32.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/sign_extend_8_32.v|
 !i113 1
 R17
 R18
 Einstr_reg
-R1
+R0
 R2
-32
 R3
-!i10b 1
-Z26 w1703264753
-!i122 21
-R5
-Z27 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Instr_Reg.vhd.vhd
-Z28 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Instr_Reg.vhd.vhd
+!i122 119
+R4
+Z28 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Instr_Reg.vhd
+Z29 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Instr_Reg.vhd
 l0
 L42 1
 VAfV1kYS402dnLRiFO;Z7_2
 !s100 _X]FAEHlMn?]L[?c6kUO?1
+R7
+32
 R8
+!i10b 1
 R9
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Instr_Reg.vhd.vhd|
-Z30 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Instr_Reg.vhd.vhd|
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Instr_Reg.vhd|
+Z31 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Instr_Reg.vhd|
 !i113 1
 R12
 R13
 Abehavioral_arch
-R1
 R2
-DEx4 work 9 instr_reg 0 22 AfV1kYS402dnLRiFO;Z7_2
-32
 R3
-!i10b 1
-!i122 21
+DEx4 work 9 instr_reg 0 22 AfV1kYS402dnLRiFO;Z7_2
+!i122 119
 l59
 L56 32
 VTD836jU:>9m^d?0ed1C0O3
 !s100 _AcjR?n;fJneQZzaIjJFa3
+R7
+32
 R8
+!i10b 1
 R9
-R29
 R30
+R31
 !i113 1
 R12
 R13
 vload_size_control
-!s110 1704845380
+R24
 !i10b 1
 !s100 fUT2WLoa[XkD;`dn5_PH[0
 R14
-I8kZK4>;7VjScC::TU;VB;0
+IS3eSFAg5=<[koJkbEzDa<0
 R15
-R5
+R4
 w1704843000
-8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/load_size_control.v
-FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/load_size_control.v
-!i122 55
+8C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\load_size_control.v
+FC:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\load_size_control.v
+!i122 94
 L0 1 15
 R16
 r1
 !s85 0
 31
-!s108 1704845380.000000
-!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/load_size_control.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/load_size_control.v|
+R26
+!s107 C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\load_size_control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\load_size_control.v|
 !i113 1
 R17
 R18
 vmdr
-!s110 1704846164
+R24
 !i10b 1
 !s100 I4T9bSSG`AlT]d<62nA7m3
 R14
-IS_WkdDffLS@0`2Kb]WLl<1
+Ig2YM;BgCXM7>IiURiQ9F41
 R15
-R5
+R4
 w1704846126
-8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/mdr.v
-FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/mdr.v
-!i122 56
-R24
+8C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\mdr.v
+FC:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\mdr.v
+!i122 95
+R27
 R16
 r1
 !s85 0
 31
-!s108 1704846163.000000
-!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/mdr.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/mdr.v|
+R26
+!s107 C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\mdr.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\mdr.v|
 !i113 1
 R17
 R18
 Ememoria
-Z31 DPx4 work 13 ram_constants 0 22 BbIcggj=<H_W75Jb?WIoZ0
-Z32 DPx3 lpm 14 lpm_components 0 22 ZZ?0`GZD@?:kcFM0gmf[@1
 R0
+Z32 DPx4 work 13 ram_constants 0 22 BbIcggj=<H_W75Jb?WIoZ0
+Z33 DPx3 lpm 14 lpm_components 0 22 ZZ?0`GZD@?:kcFM0gmf[@1
 R1
 R2
-32
 R3
-!i10b 1
-Z33 w1703264906
-!i122 22
-R5
-Z34 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Memoria.vhd
-Z35 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Memoria.vhd
+!i122 117
+R4
+Z34 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Memoria.vhd
+Z35 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Memoria.vhd
 l0
 L67 1
 V<[RFRXeHV^PMOiiinkBoS0
 !s100 __XEo>II7SFLX6Xa7VZA63
-R8
-R9
-Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Memoria.vhd|
-Z37 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Memoria.vhd|
+R7
+32
+Z36 !s110 1707677473
+!i10b 1
+Z37 !s108 1707677473.000000
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Memoria.vhd|
+Z39 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Memoria.vhd|
 !i113 1
 R12
 R13
 Abehavioral_arch
-R31
 R32
-R0
+R33
 R1
 R2
-DEx4 work 7 memoria 0 22 <[RFRXeHV^PMOiiinkBoS0
-32
 R3
-!i10b 1
-!i122 22
+DEx4 work 7 memoria 0 22 <[RFRXeHV^PMOiiinkBoS0
+!i122 117
 l103
 L79 78
 VR9W83dOfA7lWR9j>i6THA2
 !s100 aLo:Seezh^aEQ@MaJf[__3
-R8
-R9
+R7
+32
 R36
+!i10b 1
 R37
+R38
+R39
 !i113 1
 R12
 R13
 vMult
-!s110 1706815203
+R19
 !i10b 1
 !s100 iQ98>EH`KnTT4[OHDWXgG1
 R14
-IT;K@GD]lda9OZMJJCOc<E3
+IJLcW=PgH5J53S]RYLTdJ31
 R15
-R5
-R19
-8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/math/mult.v
-FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/math/mult.v
-!i122 62
+R4
+R21
+8C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\math\mult.v
+FC:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\math\mult.v
+!i122 98
 L0 1 80
 R16
 r1
 !s85 0
 31
-!s108 1706815203.000000
-!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/math/mult.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/math/mult.v|
+R20
+!s107 C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\math\mult.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\math\mult.v|
 !i113 1
 R17
 R18
 n@mult
 vmux_01_32b
-Z38 !s110 1704395586
-R15
-r1
-!s85 0
+!s110 1707574043
 !i10b 1
 !s100 oDhDJz0cmS@iG8MPG=J]Q3
-IEUb:l?16:bXYCPQX0<EE?2
-R5
-w1704303863
-8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_01-32b.v
-FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_01-32b.v
-!i122 26
-Z39 L0 1 10
+R14
+Ifa>4IRd5h<B8b`@QE9e091
+R15
+R4
+R0
+8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_01-32b.v
+FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_01-32b.v
+!i122 104
+Z40 L0 1 10
 R16
+r1
+!s85 0
 31
-Z40 !s108 1704395586.000000
-!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_01-32b.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_01-32b.v|
+!s108 1707574043.000000
+!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_01-32b.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_01-32b.v|
 !i113 1
 R17
 R18
 vmux_ALUSrcB
-!s110 1704418203
-R15
-r1
-!s85 0
+!s110 1707574028
 !i10b 1
 !s100 >SbYCFdeenikPIe^I:DZg2
-IKfB=z:>T]Y[4gDS1[_A1P3
-R5
-w1704418197
-8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ALUSrcB.v
-FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ALUSrcB.v
-!i122 34
+R14
+INLo^H<AdR8aa8;E25N]A[1
+R15
+R4
+R0
+8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_ALUSrcB.v
+FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_ALUSrcB.v
+!i122 103
 L0 1 22
 R16
+r1
+!s85 0
 31
-!s108 1704418203.000000
-!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ALUSrcB.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ALUSrcB.v|
+!s108 1707574028.000000
+!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_ALUSrcB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_ALUSrcB.v|
 !i113 1
 R17
 R18
 nmux_@a@l@u@src@b
 vmux_IorD
-!s110 1704395835
-R15
-r1
-!s85 0
+Z41 !s110 1707574079
 !i10b 1
 !s100 _Eo3=gL8o9APY=QUBH0L>3
-I<E=Gh[Y5eMPae:Y0C[ISc3
-R5
-w1704395830
-8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_IorD.v
-FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_IorD.v
-!i122 31
+R14
+Ig69zf[45<VJ]eN5CJH4_A3
+R15
+R4
+R0
+8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_IorD.v
+FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_IorD.v
+!i122 105
 L0 1 23
 R16
+r1
+!s85 0
 31
-!s108 1704395835.000000
-!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_IorD.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_IorD.v|
+Z42 !s108 1707574079.000000
+!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_IorD.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_IorD.v|
 !i113 1
 R17
 R18
 nmux_@ior@d
 vmux_MemToReg
-!s110 1704395854
-R15
-r1
-!s85 0
+R41
 !i10b 1
 !s100 EhM=oX1V:?NOhC^]lgKd_2
-IH0YV?RQ7^3:fH67V?;6b[0
-R5
-w1704395847
-8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_MemToReg.v
-FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_MemToReg.v
-!i122 32
+R14
+I]lVW_C^M8D_oO5og@W^nJ1
+R15
+R4
+R0
+8C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\muxes\Mux_MemToReg.v
+FC:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\muxes\Mux_MemToReg.v
+!i122 106
 L0 1 47
 R16
+r1
+!s85 0
 31
-!s108 1704395854.000000
-!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_MemToReg.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_MemToReg.v|
+R42
+!s107 C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\muxes\Mux_MemToReg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\muxes\Mux_MemToReg.v|
 !i113 1
 R17
 R18
 nmux_@mem@to@reg
 vmux_PCSrc
-!s110 1706823370
+R22
 !i10b 1
 !s100 :7>;gcV3jdJYSA25CgdH_2
 R14
-I<>3zR@AHSgHfZTWo56NaM0
+I<?z5FBNZ:]GR;6;OMeHGL0
 R15
-R5
+R4
 w1706821935
-8C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\muxes\Mux_PCSrc.v
-FC:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\muxes\Mux_PCSrc.v
-!i122 67
+8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_PCSrc.v
+FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_PCSrc.v
+!i122 102
 L0 1 27
 R16
 r1
 !s85 0
 31
-!s108 1706823370.000000
-!s107 C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\muxes\Mux_PCSrc.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\muxes\Mux_PCSrc.v|
+R23
+!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_PCSrc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_PCSrc.v|
 !i113 1
 R17
 R18
 nmux_@p@c@src
 vmux_RegDest
-!s110 1704395803
-R15
-r1
-!s85 0
+!s110 1707677110
 !i10b 1
-!s100 o>=J@DIemFdbR6e4f:dn;1
-Ij<G2K]WC0hJDVzoi98fn?2
-R5
-w1704395799
-8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v
-FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v
-!i122 29
+!s100 ]55EhhGDemO1iF8faHgE_0
+R14
+I1WP27VY]TWMQIE_B>`@6R1
+R15
+R4
+w1707576170
+8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_RegDest.v
+FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_RegDest.v
+!i122 114
 L0 1 25
 R16
+r1
+!s85 0
 31
-!s108 1704395803.000000
-!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_RegDest.v|
+!s108 1707677110.000000
+!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_RegDest.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_RegDest.v|
 !i113 1
 R17
 R18
 nmux_@reg@dest
 vmux_ShiftAmt
-!s110 1704400537
-R15
-r1
-!s85 0
+R41
 !i10b 1
 !s100 a=HBcOGZPFlAIn5Pji5CE1
-IC]Ah?V:EIHWm1g^Y4m?jV3
-R5
-w1704400529
-8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v
-FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v
-!i122 33
+R14
+IRIkM3OibXdlAFo=<_QA_a0
+R15
+R4
+R0
+8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_ShiftAmt.v
+FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_ShiftAmt.v
+!i122 108
 L0 1 19
 R16
+r1
+!s85 0
 31
-!s108 1704400537.000000
-!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_feitos/muxes/Mux_ShiftAmt.v|
+R42
+!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_ShiftAmt.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/muxes/Mux_ShiftAmt.v|
 !i113 1
 R17
 R18
 nmux_@shift@amt
 Pram_constants
-32
-R3
-!i10b 1
-!i122 22
-R33
-R5
+!i122 117
+R0
+R4
 R34
 R35
 l0
 L47 1
 VBbIcggj=<H_W75Jb?WIoZ0
 !s100 5;`Z:D@MR5CT6j_[c9;6h3
-R8
-R9
+R7
+32
 R36
+!i10b 1
 R37
+R38
+R39
 !i113 1
 R12
 R13
@@ -582,152 +589,152 @@ Eregdesloc
 R0
 R1
 R2
-32
-R38
-!i10b 1
-Z41 w1703264932
-!i122 23
-R5
-Z42 8C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\RegDesloc.vhd
-Z43 FC:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\RegDesloc.vhd
+R3
+!i122 120
+R4
+Z43 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/RegDesloc.vhd
+Z44 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/RegDesloc.vhd
 l0
 L80 1
 V4GibeROOKf]^CUjTE67Bo0
 !s100 =0ZG0kkZKT?Zo?iX2R9=P1
+R7
+32
 R8
-R40
-Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\RegDesloc.vhd|
-Z45 !s107 C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\RegDesloc.vhd|
+!i10b 1
+R9
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/RegDesloc.vhd|
+Z46 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/RegDesloc.vhd|
 !i113 1
 R12
 R13
 Abehavioral_arch
-R0
 R1
 R2
+R3
 DEx4 work 9 regdesloc 0 22 4GibeROOKf]^CUjTE67Bo0
-32
-R38
-!i10b 1
-!i122 23
+!i122 120
 l98
 L93 38
 VDFCTADkAb^4XhT09kD<k32
 !s100 3`2HClJO^bJLd6@PodWh?3
+R7
+32
 R8
-R40
-R44
+!i10b 1
+R9
 R45
+R46
 !i113 1
 R12
 R13
 Eregistrador
-R1
+R0
 R2
-32
-R38
-!i10b 1
-Z46 w1703264959
-!i122 24
-R5
-Z47 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Registrador.vhd
-Z48 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Registrador.vhd
+R3
+!i122 122
+R4
+Z47 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Registrador.vhd
+Z48 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Registrador.vhd
 l0
 L53 1
 VD=`aG^VOPEDP69ifb8G;52
 !s100 ^e8=Z<CbNTLXR@XGZJMQo3
-R8
-R40
-Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Registrador.vhd|
-Z50 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/componentes_dados/Registrador.vhd|
+R7
+32
+Z49 !s110 1707677545
+!i10b 1
+Z50 !s108 1707677545.000000
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Registrador.vhd|
+Z52 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/Registrador.vhd|
 !i113 1
 R12
 R13
 Abehavioral_arch
-R1
 R2
+R3
 DEx4 work 11 registrador 0 22 D=`aG^VOPEDP69ifb8G;52
-32
-R38
-!i10b 1
-!i122 24
+!i122 122
 l66
 L65 19
 V<kVfXRZJUh40ja<<lN_3:3
 !s100 EXKKzlBL1ARAk5TCN4`Vg2
-R8
-R40
+R7
+32
 R49
+!i10b 1
 R50
+R51
+R52
 !i113 1
 R12
 R13
 vshift_left_16
-!s110 1706815179
+!s110 1707573594
 !i10b 1
 !s100 ?i6PdhVdFm]e_@[kL3WPQ1
 R14
 IHK6_6oO<Xl^bfj:T@4FdV3
 R15
-R5
+R4
 w1705259033
 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/shift_left_16.v
 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/shift_left_16.v
-!i122 58
-R39
+!i122 90
+R40
 R16
 r1
 !s85 0
 31
-!s108 1706815178.000000
+!s108 1707573594.000000
 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/shift_left_16.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/shift_left_16.v|
 !i113 1
 R17
 R18
 vshift_left_2
-R23
+!s110 1707574201
 !i10b 1
 !s100 =CDILjgZ:8EEzRnNdQk^U3
 R14
 I1T1h0Hi@zY?ZC7c]H[T]O2
 R15
-R5
+R4
 w1704475314
 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/shift_left_2.v
 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/shift_left_2.v
-!i122 44
-R21
+!i122 109
+R25
 R16
 r1
 !s85 0
 31
-R25
+!s108 1707574201.000000
 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/shift_left_2.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/shift_left_2.v|
 !i113 1
 R17
 R18
 vshift_left_26_28
-!s110 1704845333
+!s110 1707573602
 !i10b 1
 !s100 6kajbK>_dG4IMVYdj8N7z2
 R14
-IHV9=;HFlX@RBgRK5=Nm>R3
+Ih5KXI_dmO?aXiUJdekL^51
 R15
-R5
+R4
 w1704470602
-8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/shift_left_26_28.v
-FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/shift_left_26_28.v
-!i122 46
-R39
+8C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\shifts\shift_left_26_28.v
+FC:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\shifts\shift_left_26_28.v
+!i122 91
+R40
 R16
 r1
 !s85 0
 31
-R25
-!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/shift_left_26_28.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/shifts/shift_left_26_28.v|
+!s108 1707573602.000000
+!s107 C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\shifts\shift_left_26_28.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\shifts\shift_left_26_28.v|
 !i113 1
 R17
 R18
@@ -738,12 +745,12 @@ vstore_control
 R14
 I;hb_X``9BmJJM@n_bW5]B3
 R15
-R5
+R4
 w1704844347
 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/store_control.v
 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/store_control.v
 !i122 52
-Z51 L0 1 17
+Z53 L0 1 17
 R16
 r1
 !s85 0
@@ -755,68 +762,68 @@ r1
 R17
 R18
 vstore_size_control
-!s110 1706821022
+R22
 !i10b 1
 !s100 k>1Dl>4eO`ScQV[2nER8;3
 R14
-IaiFcke0;H:LBL@2Zf_m6b3
+I39YCABSBglYX6Sk<jmWLP0
 R15
-R5
+R4
 w1705429859
-8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/store_size_control.v
-FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/store_size_control.v
-!i122 64
-R51
+8C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\store_size_control.v
+FC:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\store_size_control.v
+!i122 101
+R53
 R16
 r1
 !s85 0
 31
-!s108 1706821022.000000
-!s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/store_size_control.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/src/control/store_size_control.v|
+R23
+!s107 C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\store_size_control.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\src\control\store_size_control.v|
 !i113 1
 R17
 R18
 Eula32
-Z52 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-R1
+R0
+Z54 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 R2
-32
-R38
-!i10b 1
-Z53 w1704304290
-!i122 25
-R5
-Z54 8C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\ula32.vhd
-Z55 FC:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\ula32.vhd
+R3
+!i122 121
+R4
+Z55 8C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/ula32.vhd
+Z56 FC:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/ula32.vhd
 l0
 L54 1
 V0Vf9g?XiHAzJSHVHY_=Ek2
 !s100 bIXK3AY9QWAPD0h:ahSWS1
-R8
-R40
-Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\ula32.vhd|
-Z57 !s107 C:\Users\agsa0\OneDrive\Documentos\Infra-Hard-projeto\projeto\Verilog\componentes_dados\ula32.vhd|
+R7
+32
+Z57 !s110 1707677539
+!i10b 1
+R9
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/ula32.vhd|
+Z59 !s107 C:/Users/agsa0/OneDrive/Documentos/Infra-Hard-projeto/projeto/Verilog/include/ula32.vhd|
 !i113 1
 R12
 R13
 Abehavioral
-R52
-R1
+R54
 R2
+R3
 DEx4 work 5 ula32 0 22 0Vf9g?XiHAzJSHVHY_=Ek2
-32
-R38
-!i10b 1
-!i122 25
+!i122 121
 l80
 L70 138
 V=6aJ`W>XDWf:2d4W9Cn_;3
 !s100 ffUIR8Ch2BWeXO`]0hJRn3
-R8
-R40
-R56
+R7
+32
 R57
+!i10b 1
+R9
+R58
+R59
 !i113 1
 R12
 R13
