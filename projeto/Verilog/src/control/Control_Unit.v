@@ -275,6 +275,7 @@ always @(posedge Clock) begin
                     MemToReg = 4'b0;
                     ALU_SrcA = 1'b0;
                     ALU_SrcB = 2'b01;
+                    Reg_Write = 1'b0;
 
                     PC_Write = 1'b0;
 
@@ -1035,7 +1036,7 @@ always @(posedge Clock) begin
                 else if (Counter == 6'b000001) begin
                     State = State_Common;
 
-                    ALU_SrcA = 1'b00;        //
+                    ALU_SrcA = 1'b0;        //
                     ALU_SrcB = 2'b00;       //
                     Reg_Write = 1'b1;       // <----------
                     ALUOut_Write = 1'b0;    //
@@ -1157,7 +1158,7 @@ always @(posedge Clock) begin
                 else if (Counter == 6'b000001) begin
                     State = State_Common;
 
-                    ALU_SrcA = 1'b00;        //
+                    ALU_SrcA = 1'b0;        //
                     ALU_SrcB = 2'b00;       //
                     Reg_Write = 1'b1;       // <----------
                     ALUOut_Write = 1'b0;    //
@@ -1190,7 +1191,7 @@ always @(posedge Clock) begin
                 else if (Counter == 6'b000001) begin
                     State = State_Common;
 
-                    ALU_SrcA = 1'b00;        //
+                    ALU_SrcA = 1'b0;        //
                     ALU_SrcB = 2'b00;       //
                     Reg_Write = 1'b1;       // <----------
                     ALUOut_Write = 1'b0;    //
@@ -1682,10 +1683,10 @@ always @(posedge Clock) begin
                     State = State_Jal;
 
                     ALU_SrcA = 1'b0;
-                    ALU_Op = 3'b000;
+                    ALU_SrcB = 1'b01;
+                    ALU_Op = 3'b001;
                     Reg_Dst = 3'b011;
-                    MemToReg = 4'b0000;
-                    Reg_Write = 1'b1;
+                    ALUOut_Write = 1'b1;
 
                     AllowException = 1'b0;
                     
@@ -1695,10 +1696,10 @@ always @(posedge Clock) begin
                     State = State_Common;
                     
                     Reg_Write = 1'b1;
-
-                    ALU_Op = 3'b001;
-                   
-                    AllowException = 1'b0;
+                    Reg_Dst = 3'b011;
+                    MemToReg = 4'b0000;
+                    PC_Src = 3'b010;
+                    PC_Write = 1'b1;
                     
                     Counter = 6'b000000;
                 end
