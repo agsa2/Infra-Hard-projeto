@@ -270,7 +270,7 @@ always @(posedge Clock) begin
     else begin
         case (State)
             State_Common: begin
-                if (Counter == 6'b000000 ||Counter == 6'b000001) begin
+                if (Counter == 6'b000000 || Counter == 6'b000001) begin
                     State = State_Common;
                     MemToReg = 4'b0;
                     ALU_SrcA = 1'b0;
@@ -1671,7 +1671,7 @@ always @(posedge Clock) begin
                     State = State_Common;
                     
                     PC_Src = 3'b010;
-                    PC_Write = 1'b1;
+                    PC_Write = 1'b0;
                    
                     AllowException = 1'b0;
                     
@@ -1683,8 +1683,8 @@ always @(posedge Clock) begin
                     State = State_Jal;
 
                     ALU_SrcA = 1'b0;
-                    ALU_SrcB = 1'b01;
-                    ALU_Op = 3'b001;
+                    
+                    ALU_Op = 3'b000;
                     Reg_Dst = 3'b011;
                     ALUOut_Write = 1'b1;
 
