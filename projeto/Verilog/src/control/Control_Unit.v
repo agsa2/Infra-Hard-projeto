@@ -1210,29 +1210,35 @@ always @(posedge Clock) begin
                     ALU_SrcA = 1'b0;
                     ALU_SrcB = 2'b11;
                     ALU_Op = 3'b001;
+                    ALUOut_Write = 1'b1;
 
                     AllowException = 1'b0;
                     
                     Counter = Counter + 1;
                 end
-                else if (Counter == 6'b000001) begin
+                else if (Counter == 6'b000001 || Counter == 6'b000010) begin
                     State = State_Beq;
                     
-                  //  EQ = 1'b1;
                     ALU_SrcA = 1'b1;
                     ALU_SrcB = 2'b00;
                     ALU_Op = 3'b111;
-                    PC_Src = 3'b001;
-                    PC_Write = 1'b1;
-
                     AllowException = 1'b0;
-                    
+                    ALUOut_Write = 1'b0;
+
+                    if (EQ) begin
+                        PC_Src = 3'b001;
+                        PC_Write = 1'b1;
+                    end
+                    else begin
+                        PC_Src = 3'b000;
+                        PC_Write = 1'b0;
+                    end
+
                     Counter = Counter + 1;
                 end
-                else if (Counter == 6'b000010) begin
+                else if (Counter == 6'b000011) begin
                     State = State_Common;
                     
-                  //  EQ = 1'b1;
                     ALU_SrcA = 1'b0;
                     ALU_SrcB = 2'b00;
                     ALU_Op = 3'b000;
@@ -1251,27 +1257,40 @@ always @(posedge Clock) begin
                     ALU_SrcA = 1'b0;
                     ALU_SrcB = 2'b11;
                     ALU_Op = 3'b001;
+                    ALUOut_Write = 1'b1;
 
                     AllowException = 1'b0;
                     
                     Counter = Counter + 1;
                 end
-                else if (Counter == 6'b000001) begin
+                else if (Counter == 6'b000001 || Counter == 6'b000010) begin
                     State = State_Bne;
-
-                    //EQ = 1'b0;
+                    
                     ALU_SrcA = 1'b1;
                     ALU_SrcB = 2'b00;
                     ALU_Op = 3'b111;
-                    PC_Src = 3'b001;
-                    PC_Write = 1'b1;
-                   
                     AllowException = 1'b0;
-                    
+                    ALUOut_Write = 1'b0;
+
+                    if (!EQ) begin
+                        PC_Src = 3'b001;
+                        PC_Write = 1'b1;
+                    end
+                    else begin
+                        PC_Src = 3'b000;
+                        PC_Write = 1'b0;
+                    end
+
                     Counter = Counter + 1;
                 end
-                else if (Counter == 6'b000010) begin
+                else if (Counter == 6'b000011) begin
                     State = State_Common;
+                    
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b00;
+                    ALU_Op = 3'b000;
+                    PC_Src = 3'b000;
+                    PC_Write = 1'b0;
 
                     AllowException = 1'b0;
                     
