@@ -6,6 +6,10 @@ module load_size_control(
 
     wire [31:0] LWH;
 
+    // LS_control = 00 -> lw
+    // LS_control = 01 -> lh
+    // LS_control = 1? -> lb
+
     // se o bit mais a direita for 1, é lh, se não lw
     assign LWH = (LS_control[0]) ? {{16'd0}, mdr_input[15:0]} : mdr_input;
 

@@ -8,6 +8,10 @@ module store_size_control(
 
     wire [31:0] SWH;
 
+    // SS_control = 00 -> sw
+    // SS_control = 01 -> sh
+    // SS_control = 1? -> sb
+
     // se o bit mais a direita for 1, é sh, caso contrario, é sw
     assign SWH = (SS_control[0]) ? {mdr_input[31:16], B[15:0]} : B;
    
