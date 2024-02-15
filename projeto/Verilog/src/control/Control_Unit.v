@@ -132,6 +132,7 @@ parameter R_Srl        = 6'b000010;
 parameter R_Sub        = 6'b100010;
 parameter R_Break      = 6'b001101;
 parameter R_Rte        = 6'b010011;
+parameter R_Xchg       = 6'b000101;
 
 // I Type
 parameter OPCode_Addi  = 6'b001000;
@@ -373,6 +374,9 @@ always @(posedge Clock) begin
                                 end
                                 R_Rte: begin
                                     State = State_Rte;
+                                end
+                                R_Xchg: begin
+                                    State = State_Xchg;
                                 end
                             endcase
                             OPCode_Error = 1'b0;
