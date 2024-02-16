@@ -1,16 +1,16 @@
 module mux_ShiftAmt (
     input wire [1:0] ShiftAmt,
-    input wire [31:0] Shamt,
-    input wire [31:0] MDR_Out,
-    input wire [31:0] B_Out,
-    output wire [31:0] ShiftAMt_Out
+    input wire [4:0] Shamt,
+    input wire [4:0] MDR_Out,
+    input wire [4:0] B_Out,
+    output wire [4:0] ShiftAMt_Out
 );
 
-//   input 0 (000): Shamt
-//   input 1 (001): memory data register
-//   input 2 (010): B
+//   input 0 (00): Shamt
+//   input 1 (01): memory data register
+//   input 2 (10): B
 
-    wire [31:0] aux1;
+    wire [4:0] aux1;
     
     assign aux1 = (ShiftAmt[0]) ? MDR_Out : Shamt;
 

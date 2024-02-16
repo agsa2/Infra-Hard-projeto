@@ -9,6 +9,7 @@ module mux_MemToReg (
     input  wire [31:0] ShiftReg_Out,
     input  wire [31:0] B_Out,
     input  wire [31:0] A_Out,
+    input  wire [31:0] LT_extended,
     output wire [31:0] MemToReg_Out
 );
 
@@ -22,27 +23,32 @@ module mux_MemToReg (
 //   input 7 (0111): ShiftReg_Out
 //   input 8 (1000): B_Out
 //   input 9 (1001): A_Out
+//   input 10(1010): LT_extended
 
-    wire [31:0] aux1;
-    wire [31:0] aux2;
-    wire [31:0] aux3;
-    wire [31:0] aux4;
-    wire [31:0] aux5;
-    wire [31:0] aux6;
-    wire [31:0] aux7;
-    wire [31:0] aux8;
+    wire [31:0] w1xxx;
+    wire [31:0] w0xxx;
+    wire [31:0] w100x;
+    wire [31:0] w01xx;
+    wire [31:0] w00xx;
+    wire [31:0] w011x;
+    wire [31:0] w010x;
+    wire [31:0] w001x;
+    wire [31:0] w000x;
 
-    assign aux1 = (MemToReg[0]) ? LSControl_Out : ALUOut;
-    assign aux2 = (MemToReg[0]) ? HI_Out : Imm_SL16;
-    assign aux3 = (MemToReg[0]) ? 32'b00000000000000000000000011100011 : LO_Out;
-    assign aux4 = (MemToReg[0]) ? ShiftReg_Out : Imm_SignExt;
-    assign aux5 = (MemToReg[1]) ? aux2 : aux1;
-    assign aux6 = (MemToReg[1]) ? aux4 : aux3;
-    assign aux7 = (MemToReg[2]) ? aux6 : aux5;
+    assign w000x = (MemToReg[0]) ? LSControl_Out : ALUOut;
+    assign w001x = (MemToReg[0]) ? HI_Out : Imm_SL16;
+    assign w00xx = (MemToReg[1]) ? w001x : w000x;
 
-    assign aux8 = (MemToReg[0]) ? A_Out : B_Out;
+    assign w010x = (MemToReg[0]) ? 32'b00000000000000000000000011100011 : LO_Out;
+    assign w011x = (MemToReg[0]) ? ShiftReg_Out : Imm_SignExt;
+    assign w01xx = (MemToReg[1]) ? w011x : w010x;
 
-    assign MemToReg_Out = (MemToReg[3]) ? aux8 : aux7;
+    assign w0xxx = (MemToReg[2]) ? w01xx : w00xx;
+
+    assign w100x = (MemToReg[0]) ? A_Out : B_Out;
+    assign w1xxx = (MemToReg[1]) ? LT_extended : w100x;
+
+    assign MemToReg_Out = (MemToReg[3]) ? w1xxx : w0xxx;
 
 endmodule
     

@@ -381,6 +381,7 @@ module cpu (
         ShiftReg_Out,
         B_Out,
         A_Out,
+        SignExt_1_32_Out,
         Reg_WriteData
     );
 
@@ -429,8 +430,8 @@ module cpu (
     mux_ShiftAmt Mux_Shift_Amt(
         Shift_Amt,
         Instr_15_0[10:6],
-        MDR_Out,
-        B_Out,
+        MDR_Out[4:0],
+        B_Out[4:0],
         ShiftReg_Amt
     );
 
