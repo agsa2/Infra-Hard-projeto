@@ -285,7 +285,6 @@ always @(posedge Clock) begin
                     MDR_Write = 1'b0;
 
                     PC_Write = 1'b0;
-
                     
                     AllowException = 1'b0;
                     
@@ -550,7 +549,6 @@ always @(posedge Clock) begin
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000001) begin
-                    State = State_Common;
 
                     ALU_SrcA = 1'b0;        //
                     ALU_SrcB = 2'b00;       //
@@ -560,6 +558,13 @@ always @(posedge Clock) begin
                     ALU_Op = 3'b001;        //
 
                     AllowException = 1'b0;
+                    
+                    if (Exception_Signal) begin
+                        State = State_Exception;
+                    end
+                    else begin
+                        State = State_Common;
+                    end
                     
                     Counter = 6'b000000;
                 end
@@ -1036,7 +1041,6 @@ always @(posedge Clock) begin
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000001) begin
-                    State = State_Common;
 
                     ALU_SrcA = 1'b0;        //
                     ALU_SrcB = 2'b00;       //
@@ -1046,6 +1050,13 @@ always @(posedge Clock) begin
                     ALU_Op = 3'b010;        //
 
                     AllowException = 1'b0;
+                    
+                    if (Exception_Signal) begin
+                        State = State_Exception;
+                    end
+                    else begin
+                        State = State_Common;
+                    end
         
                     Counter = 6'b000000;
                 end
@@ -1075,7 +1086,7 @@ always @(posedge Clock) begin
                     ALU_Op = 3'b010;        // <----------
 
                     PC_Src = 3'b000;        // <----------
-                    PC_Write = 1'b1;
+                    PC_Write = 1'b0;
 
                     AllowException = 1'b0;
                     
@@ -1158,7 +1169,6 @@ always @(posedge Clock) begin
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000001) begin
-                    State = State_Common;
 
                     ALU_SrcA = 1'b0;        //
                     ALU_SrcB = 2'b00;       //
@@ -1169,6 +1179,13 @@ always @(posedge Clock) begin
 
                     AllowException = 1'b0;
                     
+                    if (Exception_Signal) begin
+                        State = State_Exception;
+                    end
+                    else begin
+                        State = State_Common;
+                    end
+                    
                     Counter = 6'b000000;
                 end
             end
@@ -1176,10 +1193,10 @@ always @(posedge Clock) begin
                 if (Counter == 6'b000000) begin
                     State = State_Addiu;
 
-                    Reg_Dst = 3'b100;       //
+                    Reg_Dst = 3'b000;       //
                     MemToReg = 4'b0000;     //
                     ALU_SrcA = 1'b1;        // <----------
-                    ALU_SrcB = 2'b00;       // <----------
+                    ALU_SrcB = 2'b10;       // <----------
 
                     Reg_Write = 1'b0;       //
                     ALUOut_Write = 1'b1;    //
@@ -1191,7 +1208,6 @@ always @(posedge Clock) begin
                     Counter = Counter + 1;
                 end
                 else if (Counter == 6'b000001) begin
-                    State = State_Common;
 
                     ALU_SrcA = 1'b0;        //
                     ALU_SrcB = 2'b00;       //
@@ -1201,6 +1217,13 @@ always @(posedge Clock) begin
                     ALU_Op = 3'b001;        //
 
                     AllowException = 1'b1;
+                    
+                    if (Exception_Signal) begin
+                        State = State_Exception;
+                    end
+                    else begin
+                        State = State_Common;
+                    end
                     
                     Counter = 6'b000000;
                 end
@@ -1485,7 +1508,7 @@ always @(posedge Clock) begin
                     State = State_Lb;
 
                     ALU_SrcA = 1'b1;
-                    ALU_SrcB = 2'b11;
+                    ALU_SrcB = 2'b10;
                     ALU_Op = 3'b001;
                     MDR_Write = 1'b0;
                     IorD = 2'b10;
@@ -1524,7 +1547,7 @@ always @(posedge Clock) begin
                     State = State_Lh;
 
                     ALU_SrcA = 1'b1;
-                    ALU_SrcB = 2'b11;
+                    ALU_SrcB = 2'b10;
                     ALU_Op = 3'b001;
                     MDR_Write = 1'b0;
                     IorD = 2'b10;
@@ -1587,7 +1610,7 @@ always @(posedge Clock) begin
                     State = State_Lw;
 
                     ALU_SrcA = 1'b1;
-                    ALU_SrcB = 2'b11;
+                    ALU_SrcB = 2'b10;
                     ALU_Op = 3'b001;
                     MDR_Write = 1'b0;
                     IorD = 2'b10;
@@ -1626,26 +1649,27 @@ always @(posedge Clock) begin
                     State = State_Sb;
 
                     ALU_SrcA = 1'b1;
-                    ALU_SrcB = 2'b11;
+                    ALU_SrcB = 2'b10;
                     ALU_Op = 3'b001;
-                    MDR_Write = 1'b1;
+                    MDR_Write = 1'b0;
+                    
+                    IorD = 2'b10;
+                    Mem_WR = 1'b0;
 
                     AllowException = 1'b0;
                     
                     Counter = Counter + 1;
                 end
-                else if (Counter == 6'b000001) begin
+                else if (Counter == 6'b000001 || Counter == 6'b000010) begin
                     State = State_Sb;
 
-                    IorD = 2'b10;
-                    Mem_WR = 1'b0;
                     MDR_Write = 1'b1;
 
                     SS_Control = 2'b10;
 
                     Counter = Counter + 1;
                 end
-                else if (Counter == 6'b000010) begin
+                else if (Counter == 6'b000011) begin
                     State = State_Common;
 
                     SS_Control = 2'b10;
@@ -1662,26 +1686,27 @@ always @(posedge Clock) begin
                     State = State_Sh;
 
                     ALU_SrcA = 1'b1;
-                    ALU_SrcB = 2'b11;
+                    ALU_SrcB = 2'b10;
                     ALU_Op = 3'b001;
-                    MDR_Write = 1'b1;
+                    MDR_Write = 1'b0;
+                    
+                    IorD = 2'b10;
+                    Mem_WR = 1'b0;
 
                     AllowException = 1'b0;
                     
                     Counter = Counter + 1;
                 end
-                else if (Counter == 6'b000001) begin
+                else if (Counter == 6'b000001 || Counter == 6'b000010) begin
                     State = State_Sh;
 
-                    IorD = 2'b10;
-                    Mem_WR = 1'b0;
                     MDR_Write = 1'b1;
 
                     SS_Control = 2'b01;
 
                     Counter = Counter + 1;
                 end
-                else if (Counter == 6'b000010) begin
+                else if (Counter == 6'b000011) begin
                     State = State_Common;
 
                     SS_Control = 2'b01;
@@ -1724,9 +1749,9 @@ always @(posedge Clock) begin
                     State = State_Sw;
 
                     ALU_SrcA = 1'b1;
-                    ALU_SrcB = 2'b11;
+                    ALU_SrcB = 2'b10;
                     ALU_Op = 3'b001;
-                    MDR_Write = 1'b1;
+                    MDR_Write = 1'b0;
 
                     AllowException = 1'b0;
                     
@@ -1761,6 +1786,10 @@ always @(posedge Clock) begin
 
                     PC_Src = 3'b010;
                     PC_Write = 1'b1;
+                    
+                    ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b01;
+                    ALU_Op = 3'b001;
 
                     AllowException = 1'b0;
                     
@@ -1782,10 +1811,14 @@ always @(posedge Clock) begin
                     State = State_Jal;
 
                     ALU_SrcA = 1'b0;
+                    ALU_SrcB = 2'b01;
                     
-                    ALU_Op = 3'b000;
+                    ALU_Op = 3'b001;
                     Reg_Dst = 3'b011;
                     ALUOut_Write = 1'b1;
+                    
+                    PC_Src = 3'b010;
+                    PC_Write = 1'b1;
 
                     AllowException = 1'b0;
                     
@@ -1793,12 +1826,13 @@ always @(posedge Clock) begin
                 end
                 else if (Counter == 6'b000001) begin
                     State = State_Common;
+
+                    PC_Src = 3'b000;
+                    PC_Write = 1'b0;
                     
                     Reg_Write = 1'b1;
                     Reg_Dst = 3'b011;
                     MemToReg = 4'b0000;
-                    PC_Src = 3'b010;
-                    PC_Write = 1'b1;
                     
                     Counter = 6'b000000;
                 end
@@ -1812,7 +1846,7 @@ always @(posedge Clock) begin
                     
                     ALU_SrcA = 1'b0;
                     ALU_SrcB = 2'b01;
-                    ALU_Op = 3'b000;
+                    ALU_Op = 3'b010;
                     
                     EPC_Write = 1'b1;
                     
@@ -1825,7 +1859,7 @@ always @(posedge Clock) begin
                     Mem_WR = 1'b0;
 
                     MDR_Write = 1'b1;
-                    LS_Control = 2'b00;
+                    LS_Control = 2'b10;
 
                     PC_Src = 3'b100;
                     EPC_Write = 1'b0;
@@ -1839,7 +1873,7 @@ always @(posedge Clock) begin
                     Mem_WR = 1'b0;
 
                     MDR_Write = 1'b0;
-                    LS_Control = 2'b00;
+                    LS_Control = 2'b10;
 
                     PC_Src = 3'b100;
                     PC_Write = 1'b1;
@@ -1848,12 +1882,6 @@ always @(posedge Clock) begin
                 end
             end
         endcase
-        
-        if (Exception_Signal) begin
-            State = State_Exception;
-            
-            Counter =  6'b000000;
-        end
     end
     Reset_Signal = Reset;
 end
