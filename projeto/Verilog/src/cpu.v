@@ -84,6 +84,7 @@ module cpu (
     wire [31:0] LO_In;              // LO_In: Entrada do registrador LO e saída do mux LO
     wire [31:0] LO_Out;             // LO_Out: Saída do registrador LO e entrada do mux MemToReg
     wire [31:0] EPC_Out;            // EPC_Out: Saída do EPC e entrada do mux PCSrc
+    wire [31:0] ETR_Out;            // ETR_Out: Saída do ETR e entrada do mux IorD
 
     wire [31:0] Mem_Address;        // Mem_Address: Saída do mux IorD e entrada da memória
     wire [31:0] Mem_Data;           // Mem_Data: Saída da memória e entrada do IR e do MDR
@@ -303,6 +304,16 @@ module cpu (
         EPC_Out
     );
 
+    // Exception Treatment Register
+    // ETR_Out: Saída do ETR e entrada do mux PCSrc
+    Registrador ETR(
+        Clock,
+        Reset_Signal,
+        Exception_Signal,
+        Exception_MemPosition,
+        ETR_Out
+    );
+
     // MDR Modules
     // MDR
     Registrador MDR(
@@ -356,7 +367,7 @@ module cpu (
         PC_Out,
         ALUOut_Result,
         ALU_Result,
-        Exception_MemPosition,
+        ETR_Out,
         Mem_Address
     );
 

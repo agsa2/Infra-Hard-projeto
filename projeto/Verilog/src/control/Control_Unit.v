@@ -269,9 +269,6 @@ always @(posedge Clock) begin
         end
     end
     else begin
-        if (Exception_Signal) begin
-            State = State_Exception;
-        end
         case (State)
             State_Common: begin
                 if (Counter == 6'b000000 || Counter == 6'b000001) begin
@@ -1821,21 +1818,42 @@ always @(posedge Clock) begin
                     
                     Counter = Counter + 1;
                 end
-                else if (Counter == 6'b000001) begin
-                    State = State_Common;
+                else if (Counter == 6'b000001 || Counter == 6'b000010) begin
+                    State = State_Exception;
                     
                     IorD = 2'b11;
                     Mem_WR = 1'b0;
 
                     MDR_Write = 1'b1;
-                    LS_Control = 2'b10;
+                    LS_Control = 2'b00;
 
                     PC_Src = 3'b100;
+                    EPC_Write = 1'b0;
+
+                    Counter = Counter + 1;
+                end
+                else if (Counter == 6'b000011) begin
+                    State = State_Common;
+                    
+                    IorD = 2'b11;
+                    Mem_WR = 1'b0;
+
+                    MDR_Write = 1'b0;
+                    LS_Control = 2'b00;
+
+                    PC_Src = 3'b100;
+                    PC_Write = 1'b1;
 
                     Counter = 6'b000000;
                 end
             end
         endcase
+        
+        if (Exception_Signal) begin
+            State = State_Exception;
+            
+            Counter =  6'b000000;
+        end
     end
     Reset_Signal = Reset;
 end
