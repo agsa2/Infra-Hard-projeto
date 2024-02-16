@@ -284,6 +284,7 @@ always @(posedge Clock) begin
                     IorD = 2'b00;
                     MDR_Write = 1'b0;
 
+                    PC_Src = 3'b000;
                     PC_Write = 1'b0;
                     
                     AllowException = 1'b0;
@@ -330,57 +331,80 @@ always @(posedge Clock) begin
                             case (Funct)
                                 R_Add: begin
                                     State = State_Add;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_And: begin
                                     State = State_And;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_Div: begin
                                     State = State_Div;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_Mult: begin
                                     State = State_Mult;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_Jr: begin
                                     State = State_Jr;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_Mfhi: begin
                                     State = State_Mfhi;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_Mflo: begin
                                     State = State_Mflo;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_Sll: begin
                                     State = State_Sll;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_Sllv: begin
                                     State = State_Sllv;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_Slt: begin
                                     State = State_Slt;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_Sra: begin
                                     State = State_Sra;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_Srav: begin
                                     State = State_Srav;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_Srl: begin
                                     State = State_Srl;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_Sub: begin
                                     State = State_Sub;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_Break: begin
                                     State = State_Break;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_Rte: begin
                                     State = State_Rte;
+                                    OPCode_Error = 1'b0;
                                 end
                                 R_Xchg: begin
                                     State = State_Xchg;
+                                    OPCode_Error = 1'b0;
+                                end
+                                default: begin
+                                    State = State_Exception;
+
+                                    OPCode_Error = 1'b1;
+                                    
+                                    Counter =  6'b000000;
                                 end
                             endcase
-                            OPCode_Error = 1'b0;
                         end
                         OPCode_Addi: begin
                             State = State_Addi;
@@ -578,7 +602,7 @@ always @(posedge Clock) begin
                     ALU_SrcA = 1'b1;        // <----------
                     ALU_SrcB = 2'b00;       // <----------
 
-                    Reg_Write = 1'b1;       //
+                    Reg_Write = 1'b0;       //
                     ALUOut_Write = 1'b1;    //
 
                     ALU_Op = 3'b011;        // <----------
@@ -604,13 +628,19 @@ always @(posedge Clock) begin
             end
             State_Div: begin
                 if (Counter <= 6'b100001) begin
-                    State = State_Div;
-
-                    Div_Control = 1'b1;
 
                     AllowException = 1'b0;
                     
-                    Counter = Counter + 1;
+                    if (Exception_Signal) begin
+                        State = State_Exception;
+                        Div_Control = 1'b0;
+                        Counter = 6'b000000;
+                    end
+                    else begin
+                        State = State_Div;
+                        Div_Control = 1'b1;
+                        Counter = Counter + 1;
+                    end
                 end
                 else if (Counter == 6'b100010) begin
                     State = State_Common;
@@ -1031,7 +1061,7 @@ always @(posedge Clock) begin
                     ALU_SrcA = 1'b1;        // <----------
                     ALU_SrcB = 2'b00;       // <----------
 
-                    Reg_Write = 1'b1;       //
+                    Reg_Write = 1'b0;       //
                     ALUOut_Write = 1'b1;    //
 
                     ALU_Op = 3'b010;        // <----------
@@ -1099,7 +1129,7 @@ always @(posedge Clock) begin
 
                     EPC_Write = 1'b0;
                     PC_Src = 3'b011;
-                    PC_Write = 1'b0;
+                    PC_Write = 1'b1;
 
                     AllowException = 1'b0;
                     
@@ -1877,6 +1907,8 @@ always @(posedge Clock) begin
 
                     PC_Src = 3'b100;
                     PC_Write = 1'b1;
+                    
+                    OPCode_Error = 1'b0;
 
                     Counter = 6'b000000;
                 end

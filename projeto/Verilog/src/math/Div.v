@@ -47,6 +47,9 @@ always @(posedge Clock) begin
         LO_Out = 32'b00000000000000000000000000000000;
     end
     else begin
+        if (Div_Zero_Reg) begin
+            Div_Zero_Reg = 1'b0;
+        end
         if (Controle) begin
             if (A == 32'b0000000 || B == 32'b0000000) begin
                 Div_Zero_Reg = 1'b1;
