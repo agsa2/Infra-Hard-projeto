@@ -16,6 +16,8 @@ module Div (
 reg Controle;
 reg Div_Zero_Reg;
 
+reg [1:0] Signal_Combination;
+
 reg [31:0] Quociente;
 reg [63:0] Divisor;
 reg [63:0] Resto;
@@ -23,6 +25,9 @@ reg [5:0] Contador;
 
 
 initial begin
+    Signal_Combination[1] = A[31];
+    Signal_Combination[0] = B[31];
+
     Divisor[63:32] = B;
     Divisor[31:0] = 32'b00000000000000000000000000000000;
     Resto[31:0] = A;
@@ -69,9 +74,15 @@ always @(posedge Clock) begin
 
             Contador = Contador + 1;
             if (Contador == 6'b100001) begin    // 32 ciclos
-                LO_Out = Quociente[31:0];
-                HI_Out = Resto[31:0];
-                Quociente = 32'b00000000000000000000000000000000;
+                if (Signal_Combination[1] != Signal_Combination[0]) begin
+                    LO_Out = ~Quociente + 1;
+                    HI_Out = Signal_Combination[1] ? ~Resto[31:0] : Resto[31:0];
+                end
+                else begin
+                    LO_Out = Quociente;
+                    HI_Out = Resto[31:0];
+                end
+                
                 Controle = 1'b0;
                 Contador = 6'b000000;
             end
@@ -79,15 +90,24 @@ always @(posedge Clock) begin
         if ((Div_Control != Controle) && (!Div_Zero_Reg)) begin
             Controle = Div_Control;
             if (Controle) begin
-                Divisor[63:32] = B;
+                Signal_Combination[1] = A[31];
+                Signal_Combination[0] = B[31];
+
+                Divisor[63:32] = B[31] ? ~B + 1 : B;
                 Divisor[31:0] = 32'b00000000000000000000000000000000;
-                Resto[31:0] = A;
+                Resto[31:0] = A[31] ? ~A + 1 : A;
                 Resto[63:32] = 32'b00000000000000000000000000000000;
                 Contador = 6'b000000;
+                Quociente = 32'b00000000000000000000000000000000;
             end
         end
     end
 end
+
+// RD = 00 <=> Signal = 00
+// RD = 01 <=> Signal = 10
+// RD = 10 <=> Signal = 11
+// RD = 11 <=> Signal = 01
 
 assign Div_Zero = Div_Zero_Reg;
 

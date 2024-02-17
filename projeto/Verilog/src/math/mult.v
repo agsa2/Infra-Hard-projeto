@@ -13,12 +13,17 @@ module Mult (
 
 reg Controle;
 
+reg [1:0] Signal_Combination;
+
 reg [31:0] Multiplicador;
 reg [63:0] Multiplicando;
 reg [63:0] Produto;
 reg [5:0] Contador;
 
 initial begin
+    Signal_Combination[1] = A[31];
+    Signal_Combination[0] = B[31];
+
     Multiplicando[31:0] = A;
     Multiplicando[63:32] = 32'b00000000000000000000000000000000;
     Multiplicador = B;
@@ -44,8 +49,8 @@ always @(posedge Clock) begin
             if (Multiplicador[0]) begin
                 Produto = Produto + Multiplicando;
             end
-            Multiplicando = Multiplicando << 1;
-            Multiplicador = Multiplicador >> 1;
+            Multiplicando = Multiplicando <<< 1;
+            Multiplicador = Multiplicador >>> 1;
 
             Contador = Contador + 1;
             if (Contador == 6'b100000) begin    // 32 ciclos
@@ -59,6 +64,9 @@ always @(posedge Clock) begin
         if (Mult_Control != Controle) begin
             Controle = Mult_Control;
             if (Controle) begin
+                Signal_Combination[1] = A[31];
+                Signal_Combination[0] = B[31];
+    
                 Multiplicando[31:0] = A;
                 Multiplicando[63:32] = 32'b00000000000;
                 Multiplicador = B;
