@@ -528,8 +528,8 @@ always @(posedge Clock) begin
 
                 PC_Src = 3'b000;
                 IorD = 2'b0;
-                Reg_Dst = 3'b0;
-                MemToReg = 4'b0;
+                Reg_Dst = 3'b010;
+                MemToReg = 4'b0101;
                 ALU_SrcA = 1'b0;
                 ALU_SrcB = 2'b0;
                 HI_Src = 1'b0;
@@ -541,7 +541,7 @@ always @(posedge Clock) begin
                 PC_Write_Cond = 1'b0;
                 Mem_WR = 1'b0;
                 IR_Write = 1'b0;
-                Reg_Write = 1'b0;
+                Reg_Write = 1'b1;
                 A_Write = 1'b0;
                 B_Write = 1'b0;
                 HI_Write = 1'b0;
